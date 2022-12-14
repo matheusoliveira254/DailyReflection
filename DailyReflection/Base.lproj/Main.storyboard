@@ -6,38 +6,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
-        <scene sceneID="Rdq-j3-wNt">
-            <objects>
-                <viewController id="b1q-tm-ozo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VHe-gk-cgf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="w1m-6Y-v9u"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="Ykd-ao-54s"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VH2-2M-uWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="340" y="-870"/>
-        </scene>
-        <!--Past Entries-->
-        <scene sceneID="L24-iN-gMo">
-            <objects>
-                <viewController id="kLP-As-Mev" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="veg-IX-AFl">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="VSU-eW-ymR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Past Entries" id="inU-bd-JFf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4AD-bZ-JxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2440.4580152671756" y="305.63380281690144"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QXW-3U-pLJ">
             <objects>
@@ -145,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="109" y="-870"/>
         </scene>
-        <!--Item 3-->
+        <!--Navigation Controller-->
         <scene sceneID="B3k-xr-wQk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Pz-Hh-j3H" sceneMemberID="viewController">
@@ -177,17 +145,8 @@
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="quote.opening" catalog="system" width="128" height="78"/>
         <image name="smiley" catalog="system" width="128" height="123"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
-        <image name="sun.max.fill" catalog="system" width="128" height="125"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
