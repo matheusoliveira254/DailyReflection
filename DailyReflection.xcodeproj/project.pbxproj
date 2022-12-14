@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12BC5B2294A220700D5FFD5 /* PastEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */; };
+		A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */; };
+		A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */; };
 		A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE5DC52947C9D7002EFFFB /* AppDelegate.swift */; };
 		A1BE5DC82947C9D7002EFFFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE5DC72947C9D7002EFFFB /* SceneDelegate.swift */; };
 		A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE5DC92947C9D7002EFFFB /* ViewController.swift */; };
 		A1BE5DCD2947C9D7002EFFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DCB2947C9D7002EFFFB /* Main.storyboard */; };
 		A1BE5DCF2947C9D9002EFFFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DCE2947C9D9002EFFFB /* Assets.xcassets */; };
 		A1BE5DD22947C9D9002EFFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DD02947C9D9002EFFFB /* LaunchScreen.storyboard */; };
+		A1BE5DDB294A1EA7002EFFFB /* Entries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */; };
+		A1BE5DE7294A2067002EFFFB /* NewEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
+		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
+		A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A1BE5DC22947C9D7002EFFFB /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReflection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BE5DC52947C9D7002EFFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC72947C9D7002EFFFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,8 @@
 		A1BE5DCE2947C9D9002EFFFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1BE5DD12947C9D9002EFFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1BE5DD32947C9D9002EFFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entries.storyboard; sourceTree = "<group>"; };
+		A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEntry.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				A1BE5DC92947C9D7002EFFFB /* ViewController.swift */,
 				A1BE5DCB2947C9D7002EFFFB /* Main.storyboard */,
 				A1BE5DD02947C9D9002EFFFB /* LaunchScreen.storyboard */,
+				A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */,
+				A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */,
+				A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */,
+				A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */,
+				A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */,
 			);
 			path = DailyReflection;
 			sourceTree = "<group>";
@@ -135,7 +150,12 @@
 			files = (
 				A1BE5DD22947C9D9002EFFFB /* LaunchScreen.storyboard in Resources */,
 				A1BE5DCF2947C9D9002EFFFB /* Assets.xcassets in Resources */,
+				A1BE5DE7294A2067002EFFFB /* NewEntry.storyboard in Resources */,
+				A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */,
+				A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */,
+				A12BC5B2294A220700D5FFD5 /* PastEntries.storyboard in Resources */,
 				A1BE5DCD2947C9D7002EFFFB /* Main.storyboard in Resources */,
+				A1BE5DDB294A1EA7002EFFFB /* Entries.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +330,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheusfoliveira.DailyReflection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,6 +359,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheusfoliveira.DailyReflection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
