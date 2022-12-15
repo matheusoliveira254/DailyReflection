@@ -14,6 +14,8 @@
 		A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */; };
 		A12BC5B8294A3E5B00D5FFD5 /* PastEntriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */; };
 		A12BC5BA294A3EA800D5FFD5 /* PastEntriesDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */; };
+		A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */; };
+		A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */; };
 		A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE5DC52947C9D7002EFFFB /* AppDelegate.swift */; };
 		A1BE5DC82947C9D7002EFFFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE5DC72947C9D7002EFFFB /* SceneDelegate.swift */; };
 		A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE5DC92947C9D7002EFFFB /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntriesList.storyboard; sourceTree = "<group>"; };
 		A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntriesDetails.storyboard; sourceTree = "<group>"; };
+		A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewCell.swift; sourceTree = "<group>"; };
 		A1BE5DC22947C9D7002EFFFB /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReflection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BE5DC52947C9D7002EFFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC72947C9D7002EFFFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,14 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F44E8A7294A87D800F3D3AB /* DailyQuote Files */ = {
+		A12BC5BF294A8D5600D5FFD5 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */,
-				5F87A9BE294A889000B87CA4 /* DailyQuotesTableViewController.swift */,
-				5F87A9C0294A892700B87CA4 /* DailyQuoteTableViewCell.swift */,
+				A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */,
+				A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */,
+				A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */,
 			);
-			path = "DailyQuote Files";
+			path = Entries;
 			sourceTree = "<group>";
 		};
 		A1BE5DB92947C9D6002EFFFB = {
@@ -88,7 +92,7 @@
 				A1BE5DC92947C9D7002EFFFB /* ViewController.swift */,
 				A1BE5DCB2947C9D7002EFFFB /* Main.storyboard */,
 				A1BE5DD02947C9D9002EFFFB /* LaunchScreen.storyboard */,
-				A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */,
+				A12BC5BF294A8D5600D5FFD5 /* Entries */,
 				A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */,
 				A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */,
 				5F44E8A7294A87D800F3D3AB /* DailyQuote Files */,
@@ -188,10 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */,
 				A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */,
 				A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */,
-				5F87A9C1294A892700B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
-				5F87A9BF294A889000B87CA4 /* DailyQuotesTableViewController.swift in Sources */,
+				A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */,
 				A1BE5DC82947C9D7002EFFFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,13 +10,13 @@
         <!--Entries-->
         <scene sceneID="6bM-Lj-wX2">
             <objects>
-                <tableViewController id="Sf5-eP-EYv" sceneMemberID="viewController">
+                <tableViewController id="Sf5-eP-EYv" customClass="EntryListTableViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5Fh-GU-XcK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entriesCell" rowHeight="70" id="qew-Nz-PzO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entriesCell" rowHeight="70" id="qew-Nz-PzO" customClass="EntryListTableViewCell" customModule="DailyReflection" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qew-Nz-PzO" id="RK0-lD-sez">
@@ -76,6 +76,13 @@
                                         <constraint firstItem="99Y-50-UQ1" firstAttribute="top" secondItem="RK0-lD-sez" secondAttribute="topMargin" constant="14" id="xFN-xi-Ttv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayScoreEntryListCellLabel" destination="99Y-50-UQ1" id="ihV-Om-sSk"/>
+                                    <outlet property="entryDateEntryListCellLabel" destination="1fY-qL-f7v" id="0hC-xa-seb"/>
+                                    <outlet property="entryTitleEntryListCellLabel" destination="IPg-Zc-0mp" id="Una-3A-455"/>
+                                    <outlet property="moonIconEntryListImageView" destination="7MI-Qj-8rG" id="hKd-NE-gSQ"/>
+                                    <outlet property="weatherIconEntryListCellImageView" destination="nq6-wj-Yww" id="kir-fj-wRV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
