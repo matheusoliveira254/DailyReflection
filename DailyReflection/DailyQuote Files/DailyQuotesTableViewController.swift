@@ -9,6 +9,10 @@ import UIKit
 
 class DailyQuotesTableViewController: UITableViewController {
 
+    var dailyQuote = ["Nothing is impossible. The word itself says 'I'm possible!","There is nothing impossible to they who will try." , "The bad news is time flies. The good news is you're the pilot.", "Life has got all those twists and turns. You've got to hold on tight and off you go."]
+    var authorName = ["Audrey Hepburn", "Alexander the Great", "Michael Altshuler", "Nicole Kidman"]
+    var currentDate = ["Dec 13,2022", "Dec 10, 2022", "Dec 9,2022", "Dec 14, 2022"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +26,35 @@ class DailyQuotesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 2
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 4
     }
-
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.item == 0 {
+            return 150
+        } else {
+            return 100
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "currentQuote", for: indexPath) as! DailyQuoteTableViewCell
 
-        cell.updateViews() 
+          let quotes = dailyQuote[indexPath.row]
+              let dates = currentDate[indexPath.row]
+              let author = authorName[indexPath.row]
+        
+        if indexPath.item == 0 {
+            cell.quoteTextView.font = UIFont.systemFont(ofSize: 16)
+        }
+        
+        cell.updateViews(quote: quotes, date: dates, author: author)
 
         return cell
     }
