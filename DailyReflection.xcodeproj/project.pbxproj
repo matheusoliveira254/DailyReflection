@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F87A9BF294A889000B87CA4 /* DailyQuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9BE294A889000B87CA4 /* DailyQuotesTableViewController.swift */; };
-		5F87A9C1294A892700B87CA4 /* DailyQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9C0294A892700B87CA4 /* DailyQuoteTableViewCell.swift */; };
+		5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9C4294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift */; };
+		5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9C6294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift */; };
 		A12BC5B2294A220700D5FFD5 /* PastEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */; };
 		A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */; };
 		A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F87A9BE294A889000B87CA4 /* DailyQuotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesTableViewController.swift; sourceTree = "<group>"; };
-		5F87A9C0294A892700B87CA4 /* DailyQuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuoteTableViewCell.swift; sourceTree = "<group>"; };
+		5F87A9C4294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuotesTableViewController.swift; sourceTree = "<group>"; };
+		5F87A9C6294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuoteTableViewCell.swift; sourceTree = "<group>"; };
 		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
 		A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -59,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F87A9C2294BA05D00B87CA4 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		5F87A9C3294BA11B00B87CA4 /* DailyQuotes */ = {
+			isa = PBXGroup;
+			children = (
+				A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */,
+				5F87A9C4294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift */,
+				5F87A9C6294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift */,
+			);
+			path = DailyQuotes;
+			sourceTree = "<group>";
+		};
 		A12BC5BF294A8D5600D5FFD5 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +91,7 @@
 			children = (
 				A1BE5DC42947C9D7002EFFFB /* DailyReflection */,
 				A1BE5DC32947C9D7002EFFFB /* Products */,
+				5F87A9C2294BA05D00B87CA4 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,10 +113,10 @@
 				A12BC5BF294A8D5600D5FFD5 /* Entries */,
 				A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */,
 				A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */,
-				5F44E8A7294A87D800F3D3AB /* DailyQuote Files */,
 				A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */,
 				A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */,
 				A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */,
+				5F87A9C3294BA11B00B87CA4 /* DailyQuotes */,
 			);
 			path = DailyReflection;
 			sourceTree = "<group>";
@@ -194,8 +212,10 @@
 			files = (
 				A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */,
 				A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */,
+				5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
 				A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */,
 				A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */,
+				5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */,
 				A1BE5DC82947C9D7002EFFFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
