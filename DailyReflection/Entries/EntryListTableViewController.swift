@@ -9,6 +9,10 @@ import UIKit
 
 class EntryListTableViewController: UITableViewController {
 
+    var entryTitles = ["First Day", "Second Day", "Third Day", "Fourth Day"]
+    var entryDates = ["12/1/2022", "12/2/2022", "12/3/2022", "12/4/2022"]
+    var entryRating = ["1/5", "2/5", "3/5", "4/5", "5/5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,13 +27,17 @@ class EntryListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entriesCell", for: indexPath) as! EntryListTableViewCell
         
-        cell.configure()
+        let titles = entryTitles[indexPath.row]
+        let dates = entryDates[indexPath.row]
+        let ratings = entryRating[indexPath.row]
+        
+        cell.configure(title: titles, date: dates, rating: ratings)
 
 
         return cell

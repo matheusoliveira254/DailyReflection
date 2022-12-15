@@ -15,9 +15,9 @@ class EntryListTableViewCell: UITableViewCell {
     @IBOutlet weak var dayScoreEntryListCellLabel: UILabel!
     @IBOutlet weak var moonIconEntryListImageView: UIImageView!
     
-    func configure() {
-        entryTitleEntryListCellLabel.text = "First Day"
-        entryDateEntryListCellLabel.text = "12/14/2022"
-        dayScoreEntryListCellLabel.text = "5/5"
+    func configure(title: String, date: String, rating: String) {
+        entryTitleEntryListCellLabel.text = title
+        entryDateEntryListCellLabel.text = date
+        dayScoreEntryListCellLabel.text = rating
     }
 }
