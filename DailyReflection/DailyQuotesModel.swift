@@ -8,7 +8,10 @@
 import Foundation
 
 struct TopLevelDictionary: Decodable {
-    let contents: [Quotes]
+    let contents: Contents
+}
+struct Contents: Decodable {
+    let quotes: [Quotes]
 }
 
 struct Quotes: Decodable {
