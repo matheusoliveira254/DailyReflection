@@ -37,6 +37,7 @@
 		5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesModel.swift; sourceTree = "<group>"; };
 		5FCAF4A6295224D60016FC56 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5FCAF4A9295233700016FC56 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
+		5FCAF4AB29536E290016FC56 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DailyReflection.app; path = "/Users/jicellcollado/Developers/Stateful/Group Capstone/DailyReflection/build/Debug-iphoneos/DailyReflection.app"; sourceTree = "<absolute>"; };
 		A1011E8E294BA98C005C708B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntriesDetails.storyboard; sourceTree = "<group>"; };
 		A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 		A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewCell.swift; sourceTree = "<group>"; };
-		A1BE5DC22947C9D7002EFFFB /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DailyReflection.app; path = "/Users/jicellcollado/Developers/Stateful/Group Capstone/DailyReflection/build/Debug-iphoneos/DailyReflection.app"; sourceTree = "<absolute>"; };
 		A1BE5DC52947C9D7002EFFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC72947C9D7002EFFFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC92947C9D7002EFFFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			);
 			name = DailyReflection;
 			productName = DailyReflection;
-			productReference = A1BE5DC22947C9D7002EFFFB /* DailyReflection.app */;
+			productReference = 5FCAF4AB29536E290016FC56 /* DailyReflection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
