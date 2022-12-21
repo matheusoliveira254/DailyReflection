@@ -14,15 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        NetworkController.fetchQod { result in
-            switch result {
-            case.success(let quoteOfDay):
-                print("Network call worked")
-                
-            case.failure(let error):
-                print(error)
-            }
-        }
+//        NetworkController.fetchQod { result in
+//            switch result {
+//            case.success(let quoteOfDay):
+//                print(quoteOfDay.quotes)
+//
+//            case.failure(let error):
+//                print(error)
+//            }
+//        }
         return true
     }
 

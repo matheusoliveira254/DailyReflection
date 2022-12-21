@@ -25,7 +25,7 @@ struct NetworkController {
         print(finalURL)
         
         URLSession.shared.dataTask(with: finalURL) { data, _, error in
-            if let error = error {
+            if let error {
                 completion(.failure(.requestError(error)))
             }
             guard let quoteData = data else {
