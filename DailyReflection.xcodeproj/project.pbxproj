@@ -37,7 +37,7 @@
 		5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesModel.swift; sourceTree = "<group>"; };
 		5FCAF4A6295224D60016FC56 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5FCAF4A9295233700016FC56 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
-		5FCAF4AB29536E290016FC56 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DailyReflection.app; path = "/Users/jicellcollado/Developers/Stateful/Group Capstone/DailyReflection/build/Debug-iphoneos/DailyReflection.app"; sourceTree = "<absolute>"; };
+		5FCAF4AC29536ED90016FC56 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DailyReflection.app; path = "/Users/jicellcollado/Developers/Stateful/Group Capstone/DailyReflection/build/Debug-iphoneos/DailyReflection.app"; sourceTree = "<absolute>"; };
 		A1011E8E294BA98C005C708B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			);
 			name = DailyReflection;
 			productName = DailyReflection;
-			productReference = 5FCAF4AB29536E290016FC56 /* DailyReflection.app */;
+			productReference = 5FCAF4AC29536ED90016FC56 /* DailyReflection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
