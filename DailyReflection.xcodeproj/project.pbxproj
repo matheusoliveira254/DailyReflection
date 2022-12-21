@@ -28,6 +28,7 @@
 		A1BE5DD22947C9D9002EFFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DD02947C9D9002EFFFB /* LaunchScreen.storyboard */; };
 		A1BE5DDB294A1EA7002EFFFB /* Entries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */; };
 		A1BE5DE7294A2067002EFFFB /* NewEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */; };
+		A1E49600295232A60000419D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E495FF295232A60000419D /* Entry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		A1BE5DD32947C9D9002EFFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entries.storyboard; sourceTree = "<group>"; };
 		A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEntry.storyboard; sourceTree = "<group>"; };
+		A1E495FF295232A60000419D /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				5F87A9C3294BA11B00B87CA4 /* DailyQuotes */,
 				5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */,
 				A1011E8E294BA98C005C708B /* Weather.swift */,
+				A1E495FF295232A60000419D /* Entry.swift */,
 			);
 			path = DailyReflection;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FCAF4A7295224D60016FC56 /* NetworkController.swift in Sources */,
+				A1E49600295232A60000419D /* Entry.swift in Sources */,
 				A1011E8F294BA98C005C708B /* Weather.swift in Sources */,
 				5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */,
 				A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */,
