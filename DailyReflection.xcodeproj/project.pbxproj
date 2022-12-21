@@ -45,7 +45,7 @@
 		A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntriesDetails.storyboard; sourceTree = "<group>"; };
 		A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 		A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewCell.swift; sourceTree = "<group>"; };
-		A1BE5DC22947C9D7002EFFFB /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReflection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1BE5DC22947C9D7002EFFFB /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DailyReflection.app; path = "/Users/jicellcollado/Developers/Stateful/Group Capstone/DailyReflection/build/Debug-iphoneos/DailyReflection.app"; sourceTree = "<absolute>"; };
 		A1BE5DC52947C9D7002EFFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC72947C9D7002EFFFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC92947C9D7002EFFFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,13 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F87A9C2294BA05D00B87CA4 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		5F87A9C3294BA11B00B87CA4 /* DailyQuotes */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,17 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A1BE5DC42947C9D7002EFFFB /* DailyReflection */,
-				A1BE5DC32947C9D7002EFFFB /* Products */,
-				5F87A9C2294BA05D00B87CA4 /* Recovered References */,
 			);
-			sourceTree = "<group>";
-		};
-		A1BE5DC32947C9D7002EFFFB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A1BE5DC22947C9D7002EFFFB /* DailyReflection.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A1BE5DC42947C9D7002EFFFB /* DailyReflection */ = {
@@ -199,7 +182,7 @@
 				Base,
 			);
 			mainGroup = A1BE5DB92947C9D6002EFFFB;
-			productRefGroup = A1BE5DC32947C9D7002EFFFB /* Products */;
+			productRefGroup = A1BE5DB92947C9D6002EFFFB;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
