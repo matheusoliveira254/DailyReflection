@@ -14,10 +14,10 @@ struct WeatherTopLevelDictionary: Decodable {
 struct CurrentWeatherInfo: Decodable {
     private enum CodingKeys: String, CodingKey {
         case weather
-        case moon = "moon_phase_lunation"
+//        case moon = "moon_phase_lunation"
     }
     
-    let moon: Double
+//    let moon: Double
     let weather: WeatherDictionary
 }
 

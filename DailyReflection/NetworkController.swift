@@ -41,4 +41,27 @@ struct NetworkController {
             }
         }.resume()
     }
-}
+    
+    static func fetchWeatherInfo(location: String?, completion: @escaping (Result<WeatherTopLevelDictionary, ResultError>) -> Void) {
+        
+        guard let location = location?.replacingOccurrences(of: " ", with: "_") else {return}
+        let WeatherUrl = "https://api.weatherbit.io/v2.0/current/daily?city=\(location)&key=7592672ff4534749b7736a1c4f5e30f3"
+        guard let finalWeatherUrl = URL(string: WeatherUrl) else {completion(.failure(.badURL)); return}
+        
+        URLSession.shared.dataTask(with: finalWeatherUrl) { data, _, error in
+            if let error {
+                completion(.failure(.badURL))
+                return
+            }
+            
+            guard let weatherData = data else {completion(.failure(.noData)); return}
+            
+            do {
+                let currentWeather = try JSONDecoder().decode(WeatherTopLevelDictionary.self, from: weatherData)
+                completion(.success(currentWeather))
+            } catch {
+                completion(.failure(.errorDecoding))
+            }
+        }.resume()
+    }
+}//End of struct

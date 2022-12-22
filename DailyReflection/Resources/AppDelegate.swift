@@ -23,6 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                print(error)
 //            }
 //        }
+        
+//        NetworkController.fetchWeatherInfo(location: "Salt Lake,UT") { result in
+//            switch result {
+//            case .success(let weather):
+//                print("Today's weather is \(weather)")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
         return true
     }
 
