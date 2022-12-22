@@ -13,10 +13,10 @@ class DailyQuoteTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var quoteTextView: UITextView!
     
-    func updateViews(quote: String, date: String, author: String) {
+    func updateViews(quotes: Quotes) {
         
-        authorLabel.text = author
-        dateLabel.text = date
-        quoteTextView.text = quote
+        authorLabel.text = quotes.author
+//        dateLabel.text =
+        quoteTextView.text = quotes.quote
     }
 }

@@ -9,19 +9,20 @@ import UIKit
 
 class DailyQuotesTableViewController: UITableViewController {
 
-    var dailyQuote = ["Nothing is impossible. The word itself says 'I'm possible!","There is nothing impossible to they who will try." , "The bad news is time flies. The good news is you're the pilot.", "Life has got all those twists and turns. You've got to hold on tight and off you go."]
-    var authorName = ["Audrey Hepburn", "Alexander the Great", "Michael Altshuler", "Nicole Kidman"]
-    var currentDate = ["Dec 13,2022", "Dec 10, 2022", "Dec 9,2022", "Dec 14, 2022"]
+//    var dailyQuote = ["Nothing is impossible. The word itself says 'I'm possible!","There is nothing impossible to they who will try." , "The bad news is time flies. The good news is you're the pilot.", "Life has got all those twists and turns. You've got to hold on tight and off you go."]
+//    var authorName = ["Audrey Hepburn", "Alexander the Great", "Michael Altshuler", "Nicole Kidman"]
+//    var currentDate = ["Dec 13,2022", "Dec 10, 2022", "Dec 9,2022", "Dec 14, 2022"]
     
+    
+  var viewModel: DailyQuoteViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
+        viewModel = DailyQuoteViewModel(delegate: self)
+  
+        viewModel.fetchDailyQuoteData()
+        
     }
 
     // MARK: - Table view data source
@@ -33,7 +34,7 @@ class DailyQuotesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return viewModel.content.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.item == 0 {
@@ -44,17 +45,14 @@ class DailyQuotesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "currentQuote", for: indexPath) as! DailyQuoteTableViewCell
-
-          let quotes = dailyQuote[indexPath.row]
-              let dates = currentDate[indexPath.row]
-              let author = authorName[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "currentQuote", for: indexPath) as? DailyQuoteTableViewCell else {return UITableViewCell()}
         
         if indexPath.item == 0 {
             cell.quoteTextView.font = UIFont.systemFont(ofSize: 16)
         }
+        let result = viewModel.content[indexPath.row]
         
-        cell.updateViews(quote: quotes, date: dates, author: author)
+        cell.updateViews(quotes: result)
 
         return cell
     }
@@ -105,4 +103,14 @@ class DailyQuotesTableViewController: UITableViewController {
     }
     */
 
-}
+}// end of class
+
+extension DailyQuotesTableViewController: DailyQuoteViewModelDelegate {
+    func updateViews() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    
+    }
