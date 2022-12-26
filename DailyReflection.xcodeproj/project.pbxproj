@@ -27,7 +27,9 @@
 		A1BE5DCF2947C9D9002EFFFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DCE2947C9D9002EFFFB /* Assets.xcassets */; };
 		A1BE5DD22947C9D9002EFFFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DD02947C9D9002EFFFB /* LaunchScreen.storyboard */; };
 		A1BE5DDB294A1EA7002EFFFB /* Entries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */; };
-		A1BE5DE7294A2067002EFFFB /* NewEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */; };
+		A1C14620295A086500A4C0A6 /* NewEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C1461F295A086500A4C0A6 /* NewEntry.storyboard */; };
+		A1C14622295A55B600A4C0A6 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14621295A55B600A4C0A6 /* NewEntryViewController.swift */; };
+		A1C14624295A55DD00A4C0A6 /* NewEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14623295A55DD00A4C0A6 /* NewEntryViewModel.swift */; };
 		A1E49600295232A60000419D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E495FF295232A60000419D /* Entry.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +39,6 @@
 		5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesModel.swift; sourceTree = "<group>"; };
 		5FCAF4A6295224D60016FC56 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5FCAF4A9295233700016FC56 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
-		5FCAF4AC29536ED90016FC56 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DailyReflection.app; path = "/Users/jicellcollado/Developers/Stateful/Group Capstone/DailyReflection/build/Debug-iphoneos/DailyReflection.app"; sourceTree = "<absolute>"; };
 		A1011E8E294BA98C005C708B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntriesDetails.storyboard; sourceTree = "<group>"; };
 		A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 		A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewCell.swift; sourceTree = "<group>"; };
+		A13851112954D6DF00E796E9 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReflection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BE5DC52947C9D7002EFFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC72947C9D7002EFFFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A1BE5DC92947C9D7002EFFFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +56,9 @@
 		A1BE5DD12947C9D9002EFFFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1BE5DD32947C9D9002EFFFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1BE5DDA294A1EA7002EFFFB /* Entries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entries.storyboard; sourceTree = "<group>"; };
-		A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEntry.storyboard; sourceTree = "<group>"; };
+		A1C1461F295A086500A4C0A6 /* NewEntry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewEntry.storyboard; sourceTree = "<group>"; };
+		A1C14621295A55B600A4C0A6 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
+		A1C14623295A55DD00A4C0A6 /* NewEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewModel.swift; sourceTree = "<group>"; };
 		A1E495FF295232A60000419D /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,10 +102,21 @@
 			path = Entries;
 			sourceTree = "<group>";
 		};
+		A144A9BB2954D91B004B9874 /* New Entry */ = {
+			isa = PBXGroup;
+			children = (
+				A1C1461F295A086500A4C0A6 /* NewEntry.storyboard */,
+				A1C14621295A55B600A4C0A6 /* NewEntryViewController.swift */,
+				A1C14623295A55DD00A4C0A6 /* NewEntryViewModel.swift */,
+			);
+			path = "New Entry";
+			sourceTree = "<group>";
+		};
 		A1BE5DB92947C9D6002EFFFB = {
 			isa = PBXGroup;
 			children = (
 				A1BE5DC42947C9D7002EFFFB /* DailyReflection */,
+				A13851112954D6DF00E796E9 /* DailyReflection.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +129,7 @@
 				A1BE5DCB2947C9D7002EFFFB /* Main.storyboard */,
 				A1BE5DD02947C9D9002EFFFB /* LaunchScreen.storyboard */,
 				A12BC5BF294A8D5600D5FFD5 /* Entries */,
-				A1BE5DE6294A2067002EFFFB /* NewEntry.storyboard */,
+				A144A9BB2954D91B004B9874 /* New Entry */,
 				A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */,
 				A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */,
 				A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */,
@@ -155,7 +170,7 @@
 			);
 			name = DailyReflection;
 			productName = DailyReflection;
-			productReference = 5FCAF4AC29536ED90016FC56 /* DailyReflection.app */;
+			productReference = A13851112954D6DF00E796E9 /* DailyReflection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -198,8 +213,8 @@
 			files = (
 				A1BE5DD22947C9D9002EFFFB /* LaunchScreen.storyboard in Resources */,
 				A1BE5DCF2947C9D9002EFFFB /* Assets.xcassets in Resources */,
+				A1C14620295A086500A4C0A6 /* NewEntry.storyboard in Resources */,
 				A12BC5B8294A3E5B00D5FFD5 /* PastEntriesList.storyboard in Resources */,
-				A1BE5DE7294A2067002EFFFB /* NewEntry.storyboard in Resources */,
 				A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */,
 				A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */,
 				A12BC5BA294A3EA800D5FFD5 /* PastEntriesDetails.storyboard in Resources */,
@@ -225,6 +240,8 @@
 				5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
 				A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */,
 				A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */,
+				A1C14622295A55B600A4C0A6 /* NewEntryViewController.swift in Sources */,
+				A1C14624295A55DD00A4C0A6 /* NewEntryViewModel.swift in Sources */,
 				5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */,
 				5F87A9C9294BA82A00B87CA4 /* DailyQuotesModel.swift in Sources */,
 				A1BE5DC82947C9D7002EFFFB /* SceneDelegate.swift in Sources */,
