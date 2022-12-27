@@ -9,18 +9,12 @@ import UIKit
 
 class DailyQuotesTableViewController: UITableViewController {
 
-//    var dailyQuote = ["Nothing is impossible. The word itself says 'I'm possible!","There is nothing impossible to they who will try." , "The bad news is time flies. The good news is you're the pilot.", "Life has got all those twists and turns. You've got to hold on tight and off you go."]
-//    var authorName = ["Audrey Hepburn", "Alexander the Great", "Michael Altshuler", "Nicole Kidman"]
-//    var currentDate = ["Dec 13,2022", "Dec 10, 2022", "Dec 9,2022", "Dec 14, 2022"]
-    
-    
   var viewModel: DailyQuoteViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         viewModel = DailyQuoteViewModel(delegate: self)
-  
         viewModel.fetchDailyQuoteData()
         
     }
@@ -34,7 +28,7 @@ class DailyQuotesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return viewModel.content.count
+        return viewModel.tempQuoteArray.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.item == 0 {
@@ -50,7 +44,7 @@ class DailyQuotesTableViewController: UITableViewController {
         if indexPath.item == 0 {
             cell.quoteTextView.font = UIFont.systemFont(ofSize: 16)
         }
-        let result = viewModel.content[indexPath.row]
+        let result = viewModel.tempQuoteArray[indexPath.row]
         
         cell.updateViews(quotes: result)
 

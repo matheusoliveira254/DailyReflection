@@ -16,7 +16,7 @@ class DailyQuoteTableViewCell: UITableViewCell {
     func updateViews(quotes: Quotes) {
         
         authorLabel.text = quotes.author
-//        dateLabel.text =
+//        dateLabel.text = quotes
         quoteTextView.text = quotes.quote
     }
 }

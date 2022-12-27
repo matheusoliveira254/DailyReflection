@@ -12,10 +12,12 @@ protocol DailyQuoteViewModelDelegate: AnyObject {
 }
 
 class DailyQuoteViewModel {
+ 
     var dailyQuoteData: TopLevelDictionary?
-    var content: [Quotes] {
-        self.dailyQuoteData?.contents.quotes ?? []
-    }
+    var tempQuoteArray: [Quotes] = []
+//    {
+//        self.dailyQuoteData?.contents.quotes ?? []
+//    }
     weak var delegate: DailyQuoteViewModelDelegate?
 //     private let networkController = NetworkController()
     
@@ -28,6 +30,7 @@ class DailyQuoteViewModel {
             switch result {
             case .success(let dailyQuoteData):
                 self.dailyQuoteData = dailyQuoteData
+                self.tempQuoteArray.append(contentsOf: dailyQuoteData.contents.quotes)
                 self.delegate?.updateViews()
             case .failure(let error):
                 print("Error fetching the data!",

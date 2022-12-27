@@ -13,6 +13,7 @@
 		5FCAF4A7295224D60016FC56 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A6295224D60016FC56 /* NetworkController.swift */; };
 		5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A9295233700016FC56 /* ResultError.swift */; };
 		5FCAF4B02953734D0016FC56 /* DailyQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4AF2953734D0016FC56 /* DailyQuoteViewModel.swift */; };
+		5FCAF4B22954D58C0016FC56 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4B12954D58C0016FC56 /* DateHelper.swift */; };
 		A1011E8F294BA98C005C708B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1011E8E294BA98C005C708B /* Weather.swift */; };
 		A12BC5B2294A220700D5FFD5 /* PastEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */; };
 		A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */; };
@@ -40,6 +41,7 @@
 		5FCAF4A9295233700016FC56 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 		5FCAF4AE295372B90016FC56 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReflection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCAF4AF2953734D0016FC56 /* DailyQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuoteViewModel.swift; sourceTree = "<group>"; };
+		5FCAF4B12954D58C0016FC56 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		A1011E8E294BA98C005C708B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */,
 				A1011E8E294BA98C005C708B /* Weather.swift */,
 				A1E495FF295232A60000419D /* Entry.swift */,
+				5FCAF4B12954D58C0016FC56 /* DateHelper.swift */,
 			);
 			path = DailyReflection;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				A1011E8F294BA98C005C708B /* Weather.swift in Sources */,
 				5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */,
 				A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */,
+				5FCAF4B22954D58C0016FC56 /* DateHelper.swift in Sources */,
 				A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */,
 				5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
 				A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */,
