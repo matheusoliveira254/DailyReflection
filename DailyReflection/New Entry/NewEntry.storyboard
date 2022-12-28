@@ -11,7 +11,7 @@
         <!--New Entry-->
         <scene sceneID="Cu7-b6-v8I">
             <objects>
-                <viewController id="7G6-L9-lFK" sceneMemberID="viewController">
+                <viewController id="7G6-L9-lFK" customClass="NewEntryViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xpm-Lq-sU0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,9 @@
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
+                                <connections>
+                                    <action selector="entryScoreValueChangedSegmentedControl:" destination="7G6-L9-lFK" eventType="valueChanged" id="TMC-Se-NKe"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oUO-mw-h0t">
                                 <rect key="frame" x="20" y="177" width="353" height="52"/>
@@ -101,12 +104,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Entry" id="qJe-9t-45Z">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jDI-S9-VpQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jDI-S9-VpQ">
+                            <connections>
+                                <action selector="newEntrySaveButtonTapped:" destination="7G6-L9-lFK" id="JZE-lI-pEB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="newEntryDescriptionTextView" destination="xLz-9t-8yz" id="QXD-YE-5jF"/>
+                        <outlet property="newEntryScoreSegmentedControl" destination="Sxr-Yv-mGb" id="GIK-bD-NlO"/>
+                        <outlet property="newEntryTitleTextField" destination="B0G-2F-n8S" id="Hgs-da-fLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVo-2q-rL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5234.3511450381675" y="-371.12676056338029"/>
+            <point key="canvasLocation" x="6161.0687022900756" y="-371.12676056338029"/>
         </scene>
     </scenes>
     <resources>
