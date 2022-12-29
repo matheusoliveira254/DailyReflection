@@ -7,198 +7,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FBD494A8-B213-4A9A-8A66-7E4EE2B45965"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyReflection/New Entry/NewEntryViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "newEntrySaveButtonTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "24DBA87C-1159-44FE-BD26-BBFA8E118C71"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyReflection/New Entry/NewEntryViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "newEntrySaveButtonTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "24DBA87C-1159-44FE-BD26-BBFA8E118C71 - aad18bddac5eb8b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewController.newEntrySaveButtonTapped(__C.UIBarButtonItem) -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "113">
-               </Location>
-               <Location
-                  uuid = "24DBA87C-1159-44FE-BD26-BBFA8E118C71 - aad18bddac5eb8b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewController.newEntrySaveButtonTapped(__C.UIBarButtonItem) -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "299">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3035EE6F-BA6E-4F97-B3D4-F50700D812BF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyReflection/New Entry/NewEntryViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "newEntrySaveButtonTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3035EE6F-BA6E-4F97-B3D4-F50700D812BF - aad18bddac5eb894"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewController.newEntrySaveButtonTapped(__C.UIBarButtonItem) -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "511">
-               </Location>
-               <Location
-                  uuid = "3035EE6F-BA6E-4F97-B3D4-F50700D812BF - aad18bddac5eb894"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewController.newEntrySaveButtonTapped(__C.UIBarButtonItem) -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "727">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7F78BE83-7811-4875-8483-CBBA40FA98A5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyReflection/New Entry/NewEntryViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "newEntrySaveButtonTapped(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7F78BE83-7811-4875-8483-CBBA40FA98A5 - aad18bddac5eb8fb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewController.newEntrySaveButtonTapped(__C.UIBarButtonItem) -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "957">
-               </Location>
-               <Location
-                  uuid = "7F78BE83-7811-4875-8483-CBBA40FA98A5 - aad18bddac5eb8fb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewController.newEntrySaveButtonTapped(__C.UIBarButtonItem) -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1034">
-               </Location>
-               <Location
-                  uuid = "7F78BE83-7811-4875-8483-CBBA40FA98A5 - aad18bddac5eb8fb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewController.newEntrySaveButtonTapped(__C.UIBarButtonItem) -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1221">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8282535B-D1BF-4901-8B3D-2B44246EEB58"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyReflection/New Entry/NewEntryViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "createNewEntry(title:dayScore:description:weather:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "66BA7BCE-2A53-4998-BFA0-EAB513753409"
+            uuid = "F41823ED-F084-445D-B64D-2D7FF72EF340"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -209,44 +18,12 @@
             endingLineNumber = "27"
             landmarkName = "createNewEntry(title:dayScore:description:weather:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "66BA7BCE-2A53-4998-BFA0-EAB513753409 - faac5920b3286fb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "186">
-               </Location>
-               <Location
-                  uuid = "66BA7BCE-2A53-4998-BFA0-EAB513753409 - faac5920b3286fb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
-                  moduleName = "DailyReflection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "622">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DAAFC619-D30A-4EA3-8D82-34CAC5C3E4C7"
+            uuid = "362BE9D6-B916-41B6-853D-734CCFACD276"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -262,7 +39,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "064431B6-F7B7-4D6E-A9A9-C02789B1FF44"
+            uuid = "0777279B-5E86-4CC5-999D-AB43AB39B18F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -278,55 +55,71 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D71ADCEA-60CA-4D03-A49E-95FEA4604434"
+            uuid = "7BD4BDA7-9AF1-4E2A-A8DA-87E3F1250E8C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DailyReflection/New Entry/NewEntryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "save()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "createNewEntry(title:dayScore:description:weather:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "28211B83-6973-44AD-9B0C-9483B8A27CB8"
+            uuid = "D95DBFC2-CBE5-4F1C-987D-079B692589CD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DailyReflection/New Entry/NewEntryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "save()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D95DBFC2-CBE5-4F1C-987D-079B692589CD - faac5920b328026"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
+                  moduleName = "DailyReflection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "186">
+               </Location>
+               <Location
+                  uuid = "D95DBFC2-CBE5-4F1C-987D-079B692589CD - faac5920b328026"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
+                  moduleName = "DailyReflection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "635">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3079937C-FD69-4B43-9851-03705E714811"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyReflection/New Entry/NewEntryViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "save()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8AC6F5C8-E1FC-4484-8A7A-9E055D1C1CC6"
+            uuid = "6AE5FC1C-B2C4-4AF2-9A44-31D111D1B7D0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -342,7 +135,55 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F2CBD032-6852-4053-84AA-C2C1F1413FCF"
+            uuid = "FEF74E36-C559-4A1D-A370-CD48EF854237"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyReflection/New Entry/NewEntryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "save()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FEF74E36-C559-4A1D-A370-CD48EF854237 - faac5920b32834d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
+                  moduleName = "DailyReflection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "561">
+               </Location>
+               <Location
+                  uuid = "FEF74E36-C559-4A1D-A370-CD48EF854237 - faac5920b32834d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
+                  moduleName = "DailyReflection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1123">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92656A8A-45CF-406B-8716-1697035DEC31"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -358,7 +199,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AB77B798-C33E-4BB0-9EFD-209DA3AE4E28"
+            uuid = "4E892451-19E8-4DD2-B06A-7B7AFF861A7B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -374,17 +215,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AA364AAE-1305-48F2-BC03-739C3D52D327"
+            uuid = "2540A101-504D-4319-83B6-8D86B50FCF55"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DailyReflection/New Entry/NewEntryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "save()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2540A101-504D-4319-83B6-8D86B50FCF55 - faac5920b32836c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
+                  moduleName = "DailyReflection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "715">
+               </Location>
+               <Location
+                  uuid = "2540A101-504D-4319-83B6-8D86B50FCF55 - faac5920b32836c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyReflection.NewEntryViewModel.save() -&gt; ()"
+                  moduleName = "DailyReflection"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matheusoliveira/Developer/Stateful/Unit%208/DailyReflection/DailyReflection/New%20Entry/NewEntryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "773">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

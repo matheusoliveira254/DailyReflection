@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import CoreLocation
 
-class NewEntryViewModel {
+class NewEntryViewModel: NSObject {
     
     var weather: WeatherDictionary?
     private(set) var entries: [Entry] = []
     
-    func fetchWeather(location: String?) {
-        NetworkController.fetchWeatherInfo(location: location) { result in
+    func fetchWeather(currentCity: String, currentState: String) {
+        NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
             switch result {
             case .success(let weather):
                 self.weather = weather.weather

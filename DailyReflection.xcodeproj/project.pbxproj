@@ -30,6 +30,7 @@
 		A1C14620295A086500A4C0A6 /* NewEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C1461F295A086500A4C0A6 /* NewEntry.storyboard */; };
 		A1C14622295A55B600A4C0A6 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14621295A55B600A4C0A6 /* NewEntryViewController.swift */; };
 		A1C14624295A55DD00A4C0A6 /* NewEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14623295A55DD00A4C0A6 /* NewEntryViewModel.swift */; };
+		A1C14626295D44A600A4C0A6 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14625295D44A600A4C0A6 /* LocationViewModel.swift */; };
 		A1E49600295232A60000419D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E495FF295232A60000419D /* Entry.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		A1C1461F295A086500A4C0A6 /* NewEntry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewEntry.storyboard; sourceTree = "<group>"; };
 		A1C14621295A55B600A4C0A6 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 		A1C14623295A55DD00A4C0A6 /* NewEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewModel.swift; sourceTree = "<group>"; };
+		A1C14625295D44A600A4C0A6 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		A1E495FF295232A60000419D /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				A1C1461F295A086500A4C0A6 /* NewEntry.storyboard */,
 				A1C14621295A55B600A4C0A6 /* NewEntryViewController.swift */,
 				A1C14623295A55DD00A4C0A6 /* NewEntryViewModel.swift */,
+				A1C14625295D44A600A4C0A6 /* LocationViewModel.swift */,
 			);
 			path = "New Entry";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				A1C14624295A55DD00A4C0A6 /* NewEntryViewModel.swift in Sources */,
 				5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */,
 				5F87A9C9294BA82A00B87CA4 /* DailyQuotesModel.swift in Sources */,
+				A1C14626295D44A600A4C0A6 /* LocationViewModel.swift in Sources */,
 				A1BE5DC82947C9D7002EFFFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class NewEntryViewController: UIViewController {
     
@@ -15,31 +16,21 @@ class NewEntryViewController: UIViewController {
     
     var dayScore: String?
     let viewModel = NewEntryViewModel()
+    let locationViewModel = LocationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        locationViewModel.startUpdatingLocation()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func newEntrySaveButtonTapped(_ sender: UIBarButtonItem) {
         guard let newEntryTitle = newEntryTitleTextField.text,
               let newEntryDescription = newEntryDescriptionTextView.text,
               let score = dayScore else {return}
         
-        viewModel.fetchWeather(location: <#T##String?#>)
+        viewModel.fetchWeather(currentCity: locationViewModel.currentCity ?? "New York", currentState: locationViewModel.currentState ?? "NY")
         viewModel.createNewEntry(title: newEntryTitle, dayScore: newEntryDescription, description: score, weather: viewModel.weather?.icon ?? "c01d")
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func entryScoreValueChangedSegmentedControl(_ sender: UISegmentedControl) {
