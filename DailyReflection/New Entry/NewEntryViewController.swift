@@ -14,9 +14,9 @@ class NewEntryViewController: UIViewController {
     @IBOutlet weak var newEntryDescriptionTextView: UITextView!
     @IBOutlet weak var newEntryScoreSegmentedControl: UISegmentedControl!
     
-    var dayScore: String?
-    let viewModel = NewEntryViewModel()
-    let locationViewModel = LocationViewModel()
+    private let viewModel = NewEntryViewModel()
+    private let locationViewModel = LocationViewModel()
+    var dayScore: String? = "5"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class NewEntryViewController: UIViewController {
               let score = dayScore else {return}
         
         viewModel.fetchWeather(currentCity: locationViewModel.currentCity ?? "New York", currentState: locationViewModel.currentState ?? "NY")
-        viewModel.createNewEntry(title: newEntryTitle, dayScore: newEntryDescription, description: score, weather: viewModel.weather?.icon ?? "c01d")
+        viewModel.createNewEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription, weather: viewModel.weather?.icon ?? "c01d")
         self.navigationController?.popToRootViewController(animated: true)
     }
     

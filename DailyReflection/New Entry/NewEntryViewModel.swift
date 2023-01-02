@@ -8,10 +8,10 @@
 import Foundation
 import CoreLocation
 
-class NewEntryViewModel: NSObject {
+class NewEntryViewModel {
     
     var weather: WeatherDictionary?
-    private(set) var entries: [Entry] = []
+    private var entries: [Entry] = []
     
     func fetchWeather(currentCity: String, currentState: String) {
         NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
@@ -25,8 +25,9 @@ class NewEntryViewModel: NSObject {
     }
     
     func createNewEntry(title: String, dayScore: String, description: String, weather: String) {
-        let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
-        entries.append(entry)
+        let entry = Entry(title: title, dayScore: "\(dayScore)/5", description: description, weather: weather)
+        loadEntries()
+        entries.insert(entry, at: 0)
         save()
     }
     
@@ -34,6 +35,18 @@ class NewEntryViewModel: NSObject {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
         let finalUrl = documentsDirectory.appendingPathComponent("entries.json")
         return finalUrl
+    }
+    
+    func loadEntries() {
+        guard let loadLocation = fileURL else {return}
+        
+        do {
+            let data = try Data(contentsOf: loadLocation)
+            let decodeData = try JSONDecoder().decode([Entry].self, from: data)
+            self.entries = decodeData
+        } catch let error {
+            print("Error \(error)")
+        }
     }
     
     func save() {

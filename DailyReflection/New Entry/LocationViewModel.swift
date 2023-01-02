@@ -39,4 +39,4 @@ class LocationViewModel: NSObject, CLLocationManagerDelegate {
         }
         manager.stopUpdatingLocation()
     }
-}
+}//End of class
