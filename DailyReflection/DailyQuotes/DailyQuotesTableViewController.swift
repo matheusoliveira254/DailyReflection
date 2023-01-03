@@ -41,14 +41,13 @@ class DailyQuotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "currentQuote", for: indexPath) as? DailyQuoteTableViewCell else {return UITableViewCell()}
         
-        if indexPath.item == 0 {
-            cell.quoteTextView.font = UIFont.systemFont(ofSize: 16)
-        }
-        let result = viewModel.tempQuoteArray[indexPath.row]
-        
-        cell.updateViews(quotes: result)
+            let result = viewModel.tempQuoteArray[indexPath.row]
+            
+            cell.updateViews(quotes: result)
+            
+              return cell
 
-        return cell
+
     }
    
 

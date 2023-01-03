@@ -18,4 +18,25 @@ extension Date {
         formatter.timeStyle = .none
         return formatter.string(from: self)
     }
+    func toString(withFormat format: String = "MM-dd-yyyy") -> String {
+
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = format
+            let str = dateFormatter.string(from: self)
+
+            return str
+        }
 }
+extension String {
+
+    func toDate(withFormat format: String = "yyyy-MM-dd")-> Date?{
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        let date = dateFormatter.date(from: self)
+
+        return date
+
+    }
+}
+
