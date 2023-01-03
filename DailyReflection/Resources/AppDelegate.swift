@@ -25,13 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
         
+
         print(URL.documentsDirectory)
         return true
     }
     
     func application(_ application: UIApplication, shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
         coder.encode(11.0,forKey: "quotesInfo")
-        
+//        NetworkController.fetchWeatherInfo(location: "Salt Lake,UT") { result in
+//            switch result {
+//            case .success(let weather):
+//                print("Today's weather is \(weather)")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
         return true
     }
 
