@@ -23,8 +23,10 @@ class EntryListViewModel {
         }
     }
     
-    func deleteEntry() {
-        
+    func deleteEntry(entryToBeDeleted: Entry) {
+            guard let indexOfEntryToBeDeleted = entries.firstIndex(of: entryToBeDeleted) else {return}
+            entries.remove(at: indexOfEntryToBeDeleted)
+            save()
     }
     
     private var fileURL: URL? {
@@ -32,4 +34,15 @@ class EntryListViewModel {
         let finalUrl = documentsDirectory.appendingPathComponent("entries.json")
         return finalUrl
     }
-}
+    
+    func save() {
+        guard let url = fileURL else {return}
+        
+        do {
+            let data = try JSONEncoder().encode(entries)
+            try data.write(to: url)
+        } catch let error {
+            print("Error \(error)")
+        }
+    }
+}//End of class
