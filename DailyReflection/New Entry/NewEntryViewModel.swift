@@ -10,15 +10,16 @@ import CoreLocation
 
 class NewEntryViewModel {
     
-    var weather: WeatherDictionary?
+    var weather: String?
     private var entries: [Entry] = []
     
-    func fetchWeather(currentCity: String, currentState: String) {
+    func fetchWeather(currentCity: String, currentState: String, completion: @escaping (String?) -> Void) {
         NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
             switch result {
             case .success(let weather):
-                self.weather = weather.weather
+                completion(weather.weatherData.first?.weather.icon)
             case .failure(let error):
+                completion(nil)
                 print(error)
             }
         }

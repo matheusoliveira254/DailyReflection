@@ -27,10 +27,15 @@ class NewEntryViewController: UIViewController {
         guard let newEntryTitle = newEntryTitleTextField.text,
               let newEntryDescription = newEntryDescriptionTextView.text,
               let score = dayScore else {return}
-        
-        viewModel.fetchWeather(currentCity: locationViewModel.currentCity ?? "New York", currentState: locationViewModel.currentState ?? "NY")
-        viewModel.createNewEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription, weather: viewModel.weather?.icon ?? "c01d")
-        self.navigationController?.popToRootViewController(animated: true)
+   
+        viewModel.fetchWeather(currentCity: locationViewModel.currentCity ?? "New York", currentState: locationViewModel.currentState ?? "NY") { result in
+            if let result = result {
+                self.viewModel.createNewEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription, weather: result)
+                DispatchQueue.main.async {
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+            }
+        }
     }
     
     @IBAction func entryScoreValueChangedSegmentedControl(_ sender: UISegmentedControl) {

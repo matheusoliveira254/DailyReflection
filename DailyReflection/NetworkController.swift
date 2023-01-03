@@ -42,7 +42,7 @@ struct NetworkController {
         }.resume()
     }
     
-    static func fetchWeatherInfo(city: String?, state: String?, completion: @escaping (Result<CurrentWeatherInfo, ResultError>) -> Void) {
+    static func fetchWeatherInfo(city: String?, state: String?, completion: @escaping (Result<WeatherTopLevelDictionary, ResultError>) -> Void) {
         
         guard let city = city?.replacingOccurrences(of: " ", with: "_") else {return}
         guard let state = state else {return}
@@ -58,7 +58,7 @@ struct NetworkController {
             guard let weatherData = data else {completion(.failure(.noData)); return}
             
             do {
-                let currentWeather = try JSONDecoder().decode(CurrentWeatherInfo.self, from: weatherData)
+                let currentWeather = try JSONDecoder().decode(WeatherTopLevelDictionary.self, from: weatherData)
                 completion(.success(currentWeather))
             } catch {
                 completion(.failure(.errorDecoding))

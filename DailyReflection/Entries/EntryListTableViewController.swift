@@ -13,9 +13,7 @@ class EntryListTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         viewModel.loadEntries()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
