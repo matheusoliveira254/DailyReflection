@@ -13,6 +13,9 @@
 		5FCAF4A7295224D60016FC56 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A6295224D60016FC56 /* NetworkController.swift */; };
 		5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A9295233700016FC56 /* ResultError.swift */; };
 		A1011E8F294BA98C005C708B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1011E8E294BA98C005C708B /* Weather.swift */; };
+		A1088A502965D7F800C3A8F9 /* EditEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1088A4F2965D7F800C3A8F9 /* EditEntry.storyboard */; };
+		A1088A522965D81600C3A8F9 /* EditEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088A512965D81600C3A8F9 /* EditEntryViewController.swift */; };
+		A1088A542965D82700C3A8F9 /* EditEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088A532965D82700C3A8F9 /* EditEntryViewModel.swift */; };
 		A12BC5B2294A220700D5FFD5 /* PastEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */; };
 		A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */; };
 		A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */; };
@@ -42,6 +45,9 @@
 		5FCAF4A6295224D60016FC56 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5FCAF4A9295233700016FC56 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 		A1011E8E294BA98C005C708B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		A1088A4F2965D7F800C3A8F9 /* EditEntry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditEntry.storyboard; sourceTree = "<group>"; };
+		A1088A512965D81600C3A8F9 /* EditEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryViewController.swift; sourceTree = "<group>"; };
+		A1088A532965D82700C3A8F9 /* EditEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryViewModel.swift; sourceTree = "<group>"; };
 		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
 		A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -96,6 +102,16 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		A1088A552965D82F00C3A8F9 /* Edit Entry */ = {
+			isa = PBXGroup;
+			children = (
+				A1088A4F2965D7F800C3A8F9 /* EditEntry.storyboard */,
+				A1088A512965D81600C3A8F9 /* EditEntryViewController.swift */,
+				A1088A532965D82700C3A8F9 /* EditEntryViewModel.swift */,
+			);
+			path = "Edit Entry";
+			sourceTree = "<group>";
+		};
 		A12BC5BF294A8D5600D5FFD5 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +152,7 @@
 				A1BE5DD02947C9D9002EFFFB /* LaunchScreen.storyboard */,
 				A12BC5BF294A8D5600D5FFD5 /* Entries */,
 				A144A9BB2954D91B004B9874 /* New Entry */,
+				A1088A552965D82F00C3A8F9 /* Edit Entry */,
 				A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */,
 				A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */,
 				A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */,
@@ -218,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BE5DD22947C9D9002EFFFB /* LaunchScreen.storyboard in Resources */,
+				A1088A502965D7F800C3A8F9 /* EditEntry.storyboard in Resources */,
 				A1BE5DCF2947C9D9002EFFFB /* Assets.xcassets in Resources */,
 				A1C14620295A086500A4C0A6 /* NewEntry.storyboard in Resources */,
 				A12BC5B8294A3E5B00D5FFD5 /* PastEntriesList.storyboard in Resources */,
@@ -244,6 +262,8 @@
 				A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */,
 				A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */,
 				5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
+				A1088A542965D82700C3A8F9 /* EditEntryViewModel.swift in Sources */,
+				A1088A522965D81600C3A8F9 /* EditEntryViewController.swift in Sources */,
 				A12CCE71295E141D00134E25 /* EntryListViewModel.swift in Sources */,
 				A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */,
 				A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */,

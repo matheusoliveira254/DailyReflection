@@ -10,6 +10,7 @@ import CoreLocation
 
 class NewEntryViewModel {
     
+    var dayScore: Int? = 5
     var weather: String?
     private var entries: [Entry] = []
     
@@ -25,8 +26,8 @@ class NewEntryViewModel {
         }
     }
     
-    func createNewEntry(title: String, dayScore: String, description: String, weather: String) {
-        let entry = Entry(title: title, dayScore: "\(dayScore)/5", description: description, weather: weather)
+    func createNewEntry(title: String, dayScore: Int, description: String, weather: String) {
+        let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
         loadEntries()
         entries.insert(entry, at: 0)
         save()

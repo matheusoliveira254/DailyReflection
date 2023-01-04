@@ -82,6 +82,7 @@
                                     <outlet property="entryTitleEntryListCellLabel" destination="IPg-Zc-0mp" id="Una-3A-455"/>
                                     <outlet property="moonIconEntryListImageView" destination="7MI-Qj-8rG" id="hKd-NE-gSQ"/>
                                     <outlet property="weatherIconEntryListCellImageView" destination="nq6-wj-Yww" id="kir-fj-wRV"/>
+                                    <segue destination="zXE-Tw-1G0" kind="show" identifier="editEntrySegue" id="uzQ-5W-uU9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,6 +102,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNo-ss-arH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3365.6488549618321" y="-371.12676056338029"/>
+        </scene>
+        <!--EditEntry-->
+        <scene sceneID="dCO-Zi-09t">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditEntry" id="zXE-Tw-1G0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ryW-WW-ClI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mts-rX-tgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4167" y="-423"/>
         </scene>
         <!--NewEntry-->
         <scene sceneID="8fx-8T-IeN">

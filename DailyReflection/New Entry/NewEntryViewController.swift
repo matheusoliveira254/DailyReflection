@@ -16,17 +16,21 @@ class NewEntryViewController: UIViewController {
     
     private let viewModel = NewEntryViewModel()
     private let locationViewModel = LocationViewModel()
-    var dayScore: String? = "5"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        locationViewModel.startUpdatingLocation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         locationViewModel.startUpdatingLocation()
     }
 
     @IBAction func newEntrySaveButtonTapped(_ sender: UIBarButtonItem) {
         guard let newEntryTitle = newEntryTitleTextField.text,
               let newEntryDescription = newEntryDescriptionTextView.text,
-              let score = dayScore else {return}
+              let score = viewModel.dayScore else {return}
    
         viewModel.fetchWeather(currentCity: locationViewModel.currentCity ?? "New York", currentState: locationViewModel.currentState ?? "NY") { result in
             if let result = result {
@@ -41,17 +45,17 @@ class NewEntryViewController: UIViewController {
     @IBAction func entryScoreValueChangedSegmentedControl(_ sender: UISegmentedControl) {
         switch newEntryScoreSegmentedControl.selectedSegmentIndex {
         case 0:
-            dayScore = "1"
+            viewModel.dayScore = 1
         case 1:
-            dayScore = "2"
+            viewModel.dayScore = 2
         case 2:
-            dayScore = "3"
+            viewModel.dayScore = 3
         case 3:
-            dayScore = "4"
+            viewModel.dayScore = 4
         case 4:
-            dayScore = "5"
+            viewModel.dayScore = 5
         default:
-            dayScore = "5"
+            viewModel.dayScore = 5
         }
     }
 }//End of class

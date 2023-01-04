@@ -10,14 +10,14 @@ import Foundation
 class Entry: Codable {
     
     var title: String
-    var dayScore: String
+    var dayScore: Int
     var description: String
     var weather: String
 //    var moon: Double
     var date: Date
     var uuid: String
     
-    init(title: String, dayScore: String, description: String, weather: String, /*moon: Double, */date: Date = Date(), uuid: String = UUID().uuidString) {
+    init(title: String, dayScore: Int, description: String, weather: String, /*moon: Double, */date: Date = Date(), uuid: String = UUID().uuidString) {
         self.title = title
         self.dayScore = dayScore
         self.description = description
