@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class LocationViewModel: NSObject, CLLocationManagerDelegate {
+class LocationService: NSObject, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     let geocoder = CLGeocoder()

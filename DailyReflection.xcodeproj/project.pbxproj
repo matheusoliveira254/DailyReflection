@@ -13,6 +13,8 @@
 		5FCAF4A7295224D60016FC56 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A6295224D60016FC56 /* NetworkController.swift */; };
 		5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A9295233700016FC56 /* ResultError.swift */; };
 		A1011E8F294BA98C005C708B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1011E8E294BA98C005C708B /* Weather.swift */; };
+		A1088A5729674EC600C3A8F9 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088A5629674EC600C3A8F9 /* PersistentStore.swift */; };
+		A1088A5A296758AE00C3A8F9 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088A59296758AD00C3A8F9 /* LocationService.swift */; };
 		A12BC5B2294A220700D5FFD5 /* PastEntries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */; };
 		A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */; };
 		A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */; };
@@ -31,7 +33,6 @@
 		A1C14620295A086500A4C0A6 /* EntryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C1461F295A086500A4C0A6 /* EntryDetail.storyboard */; };
 		A1C14622295A55B600A4C0A6 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14621295A55B600A4C0A6 /* EntryDetailViewController.swift */; };
 		A1C14624295A55DD00A4C0A6 /* EntryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14623295A55DD00A4C0A6 /* EntryDetailViewModel.swift */; };
-		A1C14626295D44A600A4C0A6 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14625295D44A600A4C0A6 /* LocationViewModel.swift */; };
 		A1E49600295232A60000419D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E495FF295232A60000419D /* Entry.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		5FCAF4A6295224D60016FC56 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5FCAF4A9295233700016FC56 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 		A1011E8E294BA98C005C708B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		A1088A5629674EC600C3A8F9 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		A1088A59296758AD00C3A8F9 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = "DailyReflection/Helper Files/LocationService.swift"; sourceTree = SOURCE_ROOT; };
 		A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntries.storyboard; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
 		A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -62,7 +65,7 @@
 		A1C1461F295A086500A4C0A6 /* EntryDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryDetail.storyboard; sourceTree = "<group>"; };
 		A1C14621295A55B600A4C0A6 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		A1C14623295A55DD00A4C0A6 /* EntryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewModel.swift; sourceTree = "<group>"; };
-		A1C14625295D44A600A4C0A6 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		A1C14625295D44A600A4C0A6 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A1E495FF295232A60000419D /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +99,15 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		A1088A5829674ECC00C3A8F9 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1088A5629674EC600C3A8F9 /* PersistentStore.swift */,
+				A1088A59296758AD00C3A8F9 /* LocationService.swift */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
 		A12BC5BF294A8D5600D5FFD5 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +125,7 @@
 				A1C1461F295A086500A4C0A6 /* EntryDetail.storyboard */,
 				A1C14621295A55B600A4C0A6 /* EntryDetailViewController.swift */,
 				A1C14623295A55DD00A4C0A6 /* EntryDetailViewModel.swift */,
-				A1C14625295D44A600A4C0A6 /* LocationViewModel.swift */,
+				A1C14625295D44A600A4C0A6 /* LocationService.swift */,
 			);
 			path = "Entry Detail";
 			sourceTree = "<group>";
@@ -130,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5FCAF4A8295224F90016FC56 /* Network */,
+				A1088A5829674ECC00C3A8F9 /* Helper Files */,
 				A1BE5DD92947CA00002EFFFB /* Resources */,
 				A1BE5DC92947C9D7002EFFFB /* ViewController.swift */,
 				A1BE5DCB2947C9D7002EFFFB /* Main.storyboard */,
@@ -238,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FCAF4A7295224D60016FC56 /* NetworkController.swift in Sources */,
+				A1088A5729674EC600C3A8F9 /* PersistentStore.swift in Sources */,
 				A1E49600295232A60000419D /* Entry.swift in Sources */,
 				A1011E8F294BA98C005C708B /* Weather.swift in Sources */,
 				5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */,
@@ -251,7 +265,7 @@
 				A1C14624295A55DD00A4C0A6 /* EntryDetailViewModel.swift in Sources */,
 				5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */,
 				5F87A9C9294BA82A00B87CA4 /* DailyQuotesModel.swift in Sources */,
-				A1C14626295D44A600A4C0A6 /* LocationViewModel.swift in Sources */,
+				A1088A5A296758AE00C3A8F9 /* LocationService.swift in Sources */,
 				A1BE5DC82947C9D7002EFFFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

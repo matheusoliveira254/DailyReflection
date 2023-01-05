@@ -14,7 +14,7 @@ class EntryDetailViewController: UIViewController {
     @IBOutlet weak var entryDescriptionTextView: UITextView!
     @IBOutlet weak var entryScoreSegmentedControl: UISegmentedControl!
     
-    private let locationViewModel = LocationViewModel()
+    private let locationService = LocationService()
     var viewModel: EntryDetailViewModel!
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class EntryDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        locationViewModel.startUpdatingLocation()
+        locationService.startUpdatingLocation()
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
@@ -37,7 +37,7 @@ class EntryDetailViewController: UIViewController {
             viewModel.updateEntry(entry: entry, newTitle: newEntryTitle, newDayScore: score, newDescription: newEntryDescription)
             self.navigationController?.popToRootViewController(animated: true)
         } else {
-            viewModel.fetchWeather(currentCity: locationViewModel.currentCity ?? "New York", currentState: locationViewModel.currentState ?? "NY") { result in
+            viewModel.fetchWeather(currentCity: locationService.currentCity ?? "New York", currentState: locationService.currentState ?? "NY") { result in
                 if let result = result {
                     self.viewModel.createNewEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription, weather: result)
                     DispatchQueue.main.async {

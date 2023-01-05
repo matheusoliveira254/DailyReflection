@@ -10,11 +10,6 @@ import Foundation
 class EntryListViewModel {
     
     var entries: [Entry] = []
-//    var indexOfSelectedRow: Int? {
-//        didSet {
-//
-//        }
-//    }
     
     func loadEntries() {
         guard let loadLocation = fileURL else {return}
@@ -50,5 +45,4 @@ class EntryListViewModel {
             print("Error \(error)")
         }
     }
-    
 }//End of class
