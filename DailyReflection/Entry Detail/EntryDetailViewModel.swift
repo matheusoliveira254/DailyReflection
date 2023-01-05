@@ -8,11 +8,17 @@
 import Foundation
 import CoreLocation
 
-class NewEntryViewModel {
+class EntryDetailViewModel {
     
     var dayScore: Int? = 5
     var weather: String?
-    private var entries: [Entry] = []
+    private var entries: [Entry]
+    var entry: Entry?
+    
+    init(entry: Entry?, entries: [Entry]) {
+        self.entry = entry
+        self.entries = entries
+    }
     
     func fetchWeather(currentCity: String, currentState: String, completion: @escaping (String?) -> Void) {
         NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
@@ -28,8 +34,16 @@ class NewEntryViewModel {
     
     func createNewEntry(title: String, dayScore: Int, description: String, weather: String) {
         let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
-        loadEntries()
+        //Karl said hmm
         entries.insert(entry, at: 0)
+        save()
+    }
+    
+    func updateEntry(entry: Entry?, newTitle: String, newDayScore: Int, newDescription: String) {
+        guard let entry = entry else {return}
+        entry.title = newTitle
+        entry.dayScore = newDayScore
+        entry.description = newDescription
         save()
     }
     
@@ -39,17 +53,17 @@ class NewEntryViewModel {
         return finalUrl
     }
     
-    func loadEntries() {
-        guard let loadLocation = fileURL else {return}
-        
-        do {
-            let data = try Data(contentsOf: loadLocation)
-            let decodeData = try JSONDecoder().decode([Entry].self, from: data)
-            self.entries = decodeData
-        } catch let error {
-            print("Error \(error)")
-        }
-    }
+//    func loadEntries() {
+//        guard let loadLocation = fileURL else {return}
+//
+//        do {
+//            let data = try Data(contentsOf: loadLocation)
+//            let decodeData = try JSONDecoder().decode([Entry].self, from: data)
+//            self.entries = decodeData
+//        } catch let error {
+//            print("Error \(error)")
+//        }
+//    }
     
     func save() {
         guard let url = fileURL else {return}
