@@ -6,34 +6,21 @@
 //
 
 import UIKit
+import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let locationManager = CLLocationManager()
+    let viewModel = EntryDetailViewModel()
+    let locationService = LocationService()
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        NetworkController.fetchQod { result in
-//            switch result {
-//            case.success(let quoteOfDay):
-//                print(quoteOfDay.quotes)
-//
-//            case.failure(let error):
-//                print(error)
-//            }
-//        }
-        
-//        NetworkController.fetchWeatherInfo(location: "Salt Lake,UT") { result in
-//            switch result {
-//            case .success(let weather):
-//                print("Today's weather is \(weather)")
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        return true
-    }
+        locationService.locationManagerDidChangeAuthorization(locationService.locationManager)
+    return true
+}
 
     // MARK: UISceneSession Lifecycle
 

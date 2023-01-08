@@ -65,7 +65,6 @@
 		A1C1461F295A086500A4C0A6 /* EntryDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryDetail.storyboard; sourceTree = "<group>"; };
 		A1C14621295A55B600A4C0A6 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		A1C14623295A55DD00A4C0A6 /* EntryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewModel.swift; sourceTree = "<group>"; };
-		A1C14625295D44A600A4C0A6 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A1E495FF295232A60000419D /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +124,6 @@
 				A1C1461F295A086500A4C0A6 /* EntryDetail.storyboard */,
 				A1C14621295A55B600A4C0A6 /* EntryDetailViewController.swift */,
 				A1C14623295A55DD00A4C0A6 /* EntryDetailViewModel.swift */,
-				A1C14625295D44A600A4C0A6 /* LocationService.swift */,
 			);
 			path = "Entry Detail";
 			sourceTree = "<group>";

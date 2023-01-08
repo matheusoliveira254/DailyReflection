@@ -25,13 +25,13 @@ class EntryListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return viewModel.entries.count
+        return viewModel.storage.entries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entriesCell", for: indexPath) as! EntryListTableViewCell
-        let entry = viewModel.entries[indexPath.row]
-        cell.configure(title: entry.title, date: "\(entry.date)", rating: "\(entry.dayScore)/5", weather: entry.weather)
+        let entry = viewModel.storage.entries[indexPath.row]
+        cell.configure(entry: entry)
 
         return cell
     }
@@ -39,8 +39,7 @@ class EntryListTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let entry = viewModel.entries[indexPath.row]
-            viewModel.deleteEntry(entryToBeDeleted: entry)
+            viewModel.deleteEntry(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -51,13 +50,12 @@ class EntryListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? EntryDetailViewController else {return}
         if segue.identifier == "createNewEntry" {
-            destination.viewModel = EntryDetailViewModel(entry: nil, entries: viewModel.entries)
-        }
-        
-        if segue.identifier == "toEntryDetail" {
+            destination.viewModel = EntryDetailViewModel()
+        } else if segue.identifier == "toEntryDetail" {
             guard let index = tableView.indexPathForSelectedRow else {return}
-                let entryToSend = viewModel.entries[index.row]
-            destination.viewModel = EntryDetailViewModel(entry: entryToSend, entries: viewModel.entries)
+            let indexInt = index.row
+            let entryToSend = viewModel.storage.entries[index.row]
+            destination.viewModel = EntryDetailViewModel(entry: entryToSend, entryIndex: indexInt)
         }
     }
 }

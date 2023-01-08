@@ -10,6 +10,7 @@ import CoreLocation
 
 class LocationService: NSObject, CLLocationManagerDelegate {
     
+    let viewModel = EntryDetailViewModel()
     let locationManager = CLLocationManager()
     let geocoder = CLGeocoder()
     var currentCity: String?
@@ -38,5 +39,17 @@ class LocationService: NSObject, CLLocationManagerDelegate {
             }
         }
         manager.stopUpdatingLocation()
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            startUpdatingLocation()
+            viewModel.fetchWeather(currentCity: currentCity ?? "New York", currentState: currentState ?? "NY")
+        case .notDetermined , .denied , .restricted:
+            print("Acess Denied")
+        default:
+            break
+        }
     }
 }//End of class

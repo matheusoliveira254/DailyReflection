@@ -10,69 +10,46 @@ import CoreLocation
 
 class EntryDetailViewModel {
     
+    private let locationService = LocationService()
     var dayScore: Int? = 5
     var weather: String?
-    private var entries: [Entry]
+    var storage: EntryStorable
     var entry: Entry?
+    var entryIndex: Int?
     
-    init(entry: Entry?, entries: [Entry]) {
+    init(entry: Entry? = nil, entryIndex: Int? = nil, storage: EntryStorable = EntryStorage.sharedInstance) {
         self.entry = entry
-        self.entries = entries
+        self.storage = storage
+        self.entryIndex = entryIndex
     }
     
-    func fetchWeather(currentCity: String, currentState: String, completion: @escaping (String?) -> Void) {
+    func fetchWeather(currentCity: String, currentState: String) {
         NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
             switch result {
             case .success(let weather):
-                completion(weather.weatherData.first?.weather.icon)
+                self.weather = weather.weatherData.first?.weather.icon
             case .failure(let error):
-                completion(nil)
                 print(error)
             }
         }
     }
     
-    func createNewEntry(title: String, dayScore: Int, description: String, weather: String) {
-        let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
-        //Karl said hmm
-        entries.insert(entry, at: 0)
-        save()
-    }
-    
-    func updateEntry(entry: Entry?, newTitle: String, newDayScore: Int, newDescription: String) {
-        guard let entry = entry else {return}
-        entry.title = newTitle
-        entry.dayScore = newDayScore
-        entry.description = newDescription
-        save()
-    }
-    
-    private var fileURL: URL? {
-        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
-        let finalUrl = documentsDirectory.appendingPathComponent("entries.json")
-        return finalUrl
-    }
-    
-//    func loadEntries() {
-//        guard let loadLocation = fileURL else {return}
-//
-//        do {
-//            let data = try Data(contentsOf: loadLocation)
-//            let decodeData = try JSONDecoder().decode([Entry].self, from: data)
-//            self.entries = decodeData
-//        } catch let error {
-//            print("Error \(error)")
-//        }
-//    }
-    
-    func save() {
-        guard let url = fileURL else {return}
-        
-        do {
-            let data = try JSONEncoder().encode(entries)
-            try data.write(to: url)
-        } catch let error {
-            print("Error \(error)")
+    func saveEntry(title: String, dayScore: Int, description: String, weather: String?) {
+        if entry != nil {
+            updateEntry(newTitle: title, newDayScore: dayScore, newDescription: description)
+        } else {
+            guard let weather = weather else {return}
+            let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
+            self.storage.save(entry)
         }
+    }
+    
+    private func updateEntry(newTitle: String, newDayScore: Int, newDescription: String) {
+        guard let entry = entry, let entryIndex = entryIndex else {return}
+        let entryToUpdate = storage.entries[entryIndex]
+        entryToUpdate.title = newTitle
+        entryToUpdate.dayScore = newDayScore
+        entryToUpdate.description = newDescription
+        storage.update()
     }
 }//End of class
