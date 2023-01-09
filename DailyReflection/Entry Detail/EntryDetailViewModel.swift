@@ -10,9 +10,9 @@ import CoreLocation
 
 class EntryDetailViewModel {
     
+    private let weatherService = WeatherService()
     private let locationService = LocationService()
     var dayScore: Int? = 5
-    var weather: String?
     var storage: EntryStorable
     var entry: Entry?
     var entryIndex: Int?
@@ -23,23 +23,12 @@ class EntryDetailViewModel {
         self.entryIndex = entryIndex
     }
     
-    func fetchWeather(currentCity: String, currentState: String) {
-        NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
-            switch result {
-            case .success(let weather):
-                self.weather = weather.weatherData.first?.weather.icon
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-    
     func saveEntry(title: String, dayScore: Int, description: String, weather: String?) {
         if entry != nil {
             updateEntry(newTitle: title, newDayScore: dayScore, newDescription: description)
         } else {
-            guard let weather = weather else {return}
-            let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
+            let weather = weatherService.weather
+            let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather ?? "sun.max.fill")
             self.storage.save(entry)
         }
     }

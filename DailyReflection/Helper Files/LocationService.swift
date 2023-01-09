@@ -10,10 +10,17 @@ import CoreLocation
 
 class LocationService: NSObject, CLLocationManagerDelegate {
     
+    private let weatherService = WeatherService()
     let locationManager = CLLocationManager()
     let geocoder = CLGeocoder()
     var currentCity: String?
-    var currentState: String?
+    var currentState: String? {
+        didSet {
+            guard let currentCity = currentCity,
+                  let currentState = currentState else {return}
+            weatherService.fetchWeather(currentCity: currentCity, currentState: currentState)
+        }
+    }
     
     override init() {
         super.init()

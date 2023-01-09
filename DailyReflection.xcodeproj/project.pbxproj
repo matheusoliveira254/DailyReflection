@@ -34,6 +34,7 @@
 		A1C14622295A55B600A4C0A6 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14621295A55B600A4C0A6 /* EntryDetailViewController.swift */; };
 		A1C14624295A55DD00A4C0A6 /* EntryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C14623295A55DD00A4C0A6 /* EntryDetailViewModel.swift */; };
 		A1E49600295232A60000419D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E495FF295232A60000419D /* Entry.swift */; };
+		A1FCD555296CB58000424E26 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FCD554296CB58000424E26 /* WeatherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		A1C14621295A55B600A4C0A6 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		A1C14623295A55DD00A4C0A6 /* EntryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewModel.swift; sourceTree = "<group>"; };
 		A1E495FF295232A60000419D /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		A1FCD554296CB58000424E26 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				A1088A5629674EC600C3A8F9 /* PersistentStore.swift */,
 				A1088A59296758AD00C3A8F9 /* LocationService.swift */,
+				A1FCD554296CB58000424E26 /* WeatherService.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
 				A12CCE71295E141D00134E25 /* EntryListViewModel.swift in Sources */,
 				A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */,
+				A1FCD555296CB58000424E26 /* WeatherService.swift in Sources */,
 				A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */,
 				A1C14622295A55B600A4C0A6 /* EntryDetailViewController.swift in Sources */,
 				A1C14624295A55DD00A4C0A6 /* EntryDetailViewModel.swift in Sources */,
