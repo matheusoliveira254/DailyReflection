@@ -6,19 +6,24 @@
 //
 
 import UIKit
-import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let locationManager = CLLocationManager()
-    let viewModel = EntryDetailViewModel()
-    let locationService = LocationService()
-    
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        locationService.locationManagerDidChangeAuthorization(locationService.locationManager)
+//        LocationService().authorizationCheck()
+        
+        LocationService().authorizationCheck()
+        
+//        let locationServices = LocationService()
+//        locationServices.locationManager.delegate = self
+//        let manager = CLLocationManager()
+//        if manager.authorizationStatus == .authorizedAlways {
+//            locationServices.startUpdatingLocation()
+//        } else if manager.authorizationStatus == .authorizedWhenInUse {
+//            locationServices.startUpdatingLocation()
+//        }
     return true
 }
 

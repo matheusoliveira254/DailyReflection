@@ -10,21 +10,22 @@ import CoreLocation
 
 class LocationService: NSObject, CLLocationManagerDelegate {
     
-    let viewModel = EntryDetailViewModel()
     let locationManager = CLLocationManager()
     let geocoder = CLGeocoder()
     var currentCity: String?
     var currentState: String?
     
     override init() {
-      super.init()
-      locationManager.delegate = self
+        super.init()
+        locationManager.delegate = self
     }
-
-    func startUpdatingLocation() {
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+    
+    func requestUpdatingLocation() {
+        if locationManager.authorizationStatus == .denied || locationManager.authorizationStatus == .restricted || locationManager.authorizationStatus == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -41,15 +42,14 @@ class LocationService: NSObject, CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
     }
     
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        switch manager.authorizationStatus {
-        case .authorizedAlways, .authorizedWhenInUse:
-            startUpdatingLocation()
-            viewModel.fetchWeather(currentCity: currentCity ?? "New York", currentState: currentState ?? "NY")
-        case .notDetermined , .denied , .restricted:
-            print("Acess Denied")
-        default:
-            break
+    func authorizationCheck() {
+        if locationManager.authorizationStatus == .authorizedWhenInUse || locationManager.authorizationStatus == .authorizedAlways {
+            print("User has AuthInUse, or AuthAlways")
+            locationManager.startUpdatingLocation()
+        } else if locationManager.authorizationStatus == .denied || locationManager.authorizationStatus == .restricted {
+            print("User has Denied/restricted")
+        } else if locationManager.authorizationStatus == .notDetermined {
+            print("Not determined")
         }
     }
 }//End of class

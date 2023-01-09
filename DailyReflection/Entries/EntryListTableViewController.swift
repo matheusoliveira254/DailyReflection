@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class EntryListTableViewController: UITableViewController {
+class EntryListTableViewController: UITableViewController, CLLocationManagerDelegate {
 
     private let viewModel = EntryListViewModel()
 
@@ -19,6 +20,8 @@ class EntryListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.loadEntries()
+        let locationServices = LocationService()
+        locationServices.locationManager.delegate = self
     }
 
     // MARK: - Table view data source

@@ -24,7 +24,7 @@ class EntryDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        locationService.startUpdatingLocation()
+        locationService.requestUpdatingLocation()
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
