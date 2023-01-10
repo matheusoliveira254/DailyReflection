@@ -82,6 +82,7 @@
                                     <outlet property="entryTitleEntryListCellLabel" destination="IPg-Zc-0mp" id="Una-3A-455"/>
                                     <outlet property="moonIconEntryListImageView" destination="7MI-Qj-8rG" id="hKd-NE-gSQ"/>
                                     <outlet property="weatherIconEntryListCellImageView" destination="nq6-wj-Yww" id="kir-fj-wRV"/>
+                                    <segue destination="4tV-9c-3sM" kind="show" identifier="toEntryDetail" id="af9-dt-9x5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,7 +94,7 @@
                     <navigationItem key="navigationItem" title="Entries" id="6T4-Rp-Ie4">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="7vP-x2-fMf">
                             <connections>
-                                <segue destination="4tV-9c-3sM" kind="show" id="F5q-NH-t7i"/>
+                                <segue destination="4tV-9c-3sM" kind="show" identifier="createNewEntry" id="F5q-NH-t7i"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="3365.6488549618321" y="-371.12676056338029"/>
         </scene>
-        <!--NewEntry-->
+        <!--EntryDetail-->
         <scene sceneID="8fx-8T-IeN">
             <objects>
-                <viewControllerPlaceholder storyboardName="NewEntry" id="4tV-9c-3sM" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="EntryDetail" id="4tV-9c-3sM" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="poi-8S-sGO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEn-l1-nVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,6 +114,9 @@
             <point key="canvasLocation" x="4169" y="-371"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="F5q-NH-t7i"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>

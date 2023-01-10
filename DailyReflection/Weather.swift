@@ -8,19 +8,17 @@
 import Foundation
 
 struct WeatherTopLevelDictionary: Decodable {
-    let data: [CurrentWeatherInfo]
+    private enum CodingKeys: String, CodingKey {
+        case weatherData = "data"
+    }
+    let weatherData: [CurrentWeatherInfo]
 }
 
 struct CurrentWeatherInfo: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case weather
-//        case moon = "moon_phase_lunation"
-    }
-    
-//    let moon: Double
     let weather: WeatherDictionary
 }
 
 struct WeatherDictionary: Decodable {
+//    let description: String
     let icon: String
 }
