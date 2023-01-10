@@ -28,7 +28,11 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return viewModel.storage.entries.count
+        if viewModel.storage.entries.count <= 14 {
+            return viewModel.storage.entries.count
+        } else {
+            return 14
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

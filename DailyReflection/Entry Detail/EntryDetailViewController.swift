@@ -14,6 +14,7 @@ class EntryDetailViewController: UIViewController {
     @IBOutlet weak var entryDescriptionTextView: UITextView!
     @IBOutlet weak var entryScoreSegmentedControl: UISegmentedControl!
     
+    private let weatherService = WeatherService()
     private let locationService = LocationService()
     var viewModel: EntryDetailViewModel!
     
@@ -31,20 +32,9 @@ class EntryDetailViewController: UIViewController {
         guard let newEntryTitle = entryTitleTextField.text,
               let newEntryDescription = entryDescriptionTextView.text else {return}
         let score = entryScoreSegmentedControl.selectedSegmentIndex + 1
-//        
-//        if let entry = viewModel.entry {
-//            viewModel.updateEntry(entry: entry, newTitle: newEntryTitle, newDayScore: score, newDescription: newEntryDescription)
-//            self.navigationController?.popToRootViewController(animated: true)
-//        } else {
-//            viewModel.fetchWeather(currentCity: locationService.currentCity ?? "New York", currentState: locationService.currentState ?? "NY") { result in
-//                if let result = result {
-//                    self.viewModel.createNewEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription, weather: result)
-//                    DispatchQueue.main.async {
-//                        self.navigationController?.popToRootViewController(animated: true)
-//                    }
-//                }
-//            }
-//        }
+        
+        viewModel.saveEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription)
+        navigationController?.popViewController(animated: true)
     }
     
     func populateViews() {

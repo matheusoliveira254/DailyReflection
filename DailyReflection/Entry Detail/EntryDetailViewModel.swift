@@ -23,12 +23,12 @@ class EntryDetailViewModel {
         self.entryIndex = entryIndex
     }
     
-    func saveEntry(title: String, dayScore: Int, description: String, weather: String?) {
+    func saveEntry(title: String, dayScore: Int, description: String) {
         if entry != nil {
             updateEntry(newTitle: title, newDayScore: dayScore, newDescription: description)
         } else {
-            let weather = weatherService.weather
-            let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather ?? "sun.max.fill")
+            guard let weather = weatherService.weather else {return}
+            let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
             self.storage.save(entry)
         }
     }

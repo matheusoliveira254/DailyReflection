@@ -8,7 +8,7 @@
 import Foundation
 
 class WeatherService {
-    var weather: String?
+    var weather: String? = "sun.max.fill"
     
     func fetchWeather(currentCity: String, currentState: String) {
         NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
