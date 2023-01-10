@@ -38,8 +38,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fY-qL-f7v">
-                                            <rect key="frame" x="71" y="38" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="71" y="38" width="40" height="21"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                             <color key="textColor" systemColor="systemGrayColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -68,7 +68,6 @@
                                         <constraint firstAttribute="trailing" secondItem="7MI-Qj-8rG" secondAttribute="trailing" constant="12" id="Rd1-d6-cNL"/>
                                         <constraint firstItem="nq6-wj-Yww" firstAttribute="top" secondItem="RK0-lD-sez" secondAttribute="top" constant="11" id="TIJ-Go-vD8"/>
                                         <constraint firstItem="nq6-wj-Yww" firstAttribute="leading" secondItem="RK0-lD-sez" secondAttribute="leading" constant="15" id="VEt-47-ate"/>
-                                        <constraint firstItem="1fY-qL-f7v" firstAttribute="top" secondItem="IPg-Zc-0mp" secondAttribute="bottom" constant="5" id="b2f-TZ-Kr5"/>
                                         <constraint firstItem="7MI-Qj-8rG" firstAttribute="top" secondItem="RK0-lD-sez" secondAttribute="top" constant="20" id="gMo-l3-KNL"/>
                                         <constraint firstItem="IPg-Zc-0mp" firstAttribute="top" secondItem="RK0-lD-sez" secondAttribute="topMargin" id="jyb-BZ-goN"/>
                                         <constraint firstItem="7MI-Qj-8rG" firstAttribute="leading" secondItem="99Y-50-UQ1" secondAttribute="trailing" constant="8" symbolic="YES" id="oNr-td-J1p"/>

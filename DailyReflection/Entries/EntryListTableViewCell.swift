@@ -18,7 +18,7 @@ class EntryListTableViewCell: UITableViewCell {
     func configure(entry: Entry?) {
         guard let entry = entry else {return}
         entryTitleEntryListCellLabel.text = entry.title
-        entryDateEntryListCellLabel.text = "\(entry.date)"
+        entryDateEntryListCellLabel.text = entry.date.toString()
         dayScoreEntryListCellLabel.text = "\(entry.dayScore)/5"
         weatherIconEntryListCellImageView.image = UIImage(named: entry.weather)
     }
