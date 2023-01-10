@@ -26,6 +26,10 @@ class LocationService: NSObject, CLLocationManagerDelegate {
         super.init()
         locationManager.delegate = self
     }
+
+    func updateLocation(completion: @escaping () -> Void) {
+        locationManager.startUpdatingLocation()
+    }
     
     func requestUpdatingLocation() {
         if locationManager.authorizationStatus == .denied || locationManager.authorizationStatus == .restricted || locationManager.authorizationStatus == .notDetermined {

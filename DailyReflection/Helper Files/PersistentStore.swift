@@ -36,6 +36,10 @@ class EntryStorage: EntryStorable {
         }
     }
     
+    func saveWeather() {
+        
+    }
+    
     func update() {
         guard let url = fileURL else {return}
         do {

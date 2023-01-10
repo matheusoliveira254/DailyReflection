@@ -11,20 +11,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        LocationService().authorizationCheck()
-        
         LocationService().authorizationCheck()
         
-//        let locationServices = LocationService()
-//        locationServices.locationManager.delegate = self
-//        let manager = CLLocationManager()
-//        if manager.authorizationStatus == .authorizedAlways {
-//            locationServices.startUpdatingLocation()
-//        } else if manager.authorizationStatus == .authorizedWhenInUse {
-//            locationServices.startUpdatingLocation()
-//        }
-    return true
+        return true
 }
 
     // MARK: UISceneSession Lifecycle

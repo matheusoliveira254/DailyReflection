@@ -27,8 +27,8 @@ class EntryDetailViewModel {
         if entry != nil {
             updateEntry(newTitle: title, newDayScore: dayScore, newDescription: description)
         } else {
-            guard let weather = weatherService.weather else {return}
-            let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather)
+            let weather = UserDefaults.standard.string(forKey: "weather")
+            let entry = Entry(title: title, dayScore: dayScore, description: description, weather: weather ?? "sun.max.fill" )
             self.storage.save(entry)
         }
     }

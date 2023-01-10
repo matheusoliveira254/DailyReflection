@@ -8,13 +8,14 @@
 import Foundation
 
 class WeatherService {
-    var weather: String? = "sun.max.fill"
+    var weather: WeatherTopLevelDictionary?
     
     func fetchWeather(currentCity: String, currentState: String) {
         NetworkController.fetchWeatherInfo(city: currentCity, state: currentState) { result in
             switch result {
             case .success(let weather):
-                self.weather = weather.weatherData.first?.weather.icon
+                self.weather = weather
+                UserDefaults.standard.set(weather.weatherData.first?.weather.icon, forKey: "weather")
             case .failure(let error):
                 print(error)
             }
