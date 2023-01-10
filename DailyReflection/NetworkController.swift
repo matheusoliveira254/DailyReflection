@@ -5,10 +5,11 @@
 //  Created by Jicell on 12/20/22.
 //
 
-import Foundation
+import UIKit
 
 struct NetworkController {
     private static let baseURLString = "https://quotes.rest/qod"
+    
     static func fetchQod(completion: @escaping (Result<TopLevelDictionary, ResultError>) -> Void) {
         
         guard let baseUrl = URL(string: baseURLString) else {

@@ -12,6 +12,8 @@
 		5F87A9C9294BA82A00B87CA4 /* DailyQuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */; };
 		5FCAF4A7295224D60016FC56 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A6295224D60016FC56 /* NetworkController.swift */; };
 		5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4A9295233700016FC56 /* ResultError.swift */; };
+		5FCAF4B02953734D0016FC56 /* DailyQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4AF2953734D0016FC56 /* DailyQuoteViewModel.swift */; };
+		5FCAF4B22954D58C0016FC56 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCAF4B12954D58C0016FC56 /* DateHelper.swift */; };
 		A1011E8F294BA98C005C708B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1011E8E294BA98C005C708B /* Weather.swift */; };
 		A1088A5729674EC600C3A8F9 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088A5629674EC600C3A8F9 /* PersistentStore.swift */; };
 		A1088A5A296758AE00C3A8F9 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088A59296758AD00C3A8F9 /* LocationService.swift */; };
@@ -43,6 +45,9 @@
 		5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesModel.swift; sourceTree = "<group>"; };
 		5FCAF4A6295224D60016FC56 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5FCAF4A9295233700016FC56 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
+		5FCAF4AE295372B90016FC56 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReflection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCAF4AF2953734D0016FC56 /* DailyQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuoteViewModel.swift; sourceTree = "<group>"; };
+		5FCAF4B12954D58C0016FC56 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		A1011E8E294BA98C005C708B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A1088A5629674EC600C3A8F9 /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		A1088A59296758AD00C3A8F9 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = "DailyReflection/Helper Files/LocationService.swift"; sourceTree = SOURCE_ROOT; };
@@ -87,6 +92,7 @@
 				A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */,
 				5F87A9C4294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift */,
 				5F87A9C6294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift */,
+				5FCAF4AF2953734D0016FC56 /* DailyQuoteViewModel.swift */,
 			);
 			path = DailyQuotes;
 			sourceTree = "<group>";
@@ -135,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				A1BE5DC42947C9D7002EFFFB /* DailyReflection */,
-				A13851112954D6DF00E796E9 /* DailyReflection.app */,
+				5FCAF4AE295372B90016FC56 /* DailyReflection.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +164,7 @@
 				5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */,
 				A1011E8E294BA98C005C708B /* Weather.swift */,
 				A1E495FF295232A60000419D /* Entry.swift */,
+				5FCAF4B12954D58C0016FC56 /* DateHelper.swift */,
 			);
 			path = DailyReflection;
 			sourceTree = "<group>";
@@ -190,7 +197,7 @@
 			);
 			name = DailyReflection;
 			productName = DailyReflection;
-			productReference = A13851112954D6DF00E796E9 /* DailyReflection.app */;
+			productReference = 5FCAF4AE295372B90016FC56 /* DailyReflection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -257,6 +264,7 @@
 				A1011E8F294BA98C005C708B /* Weather.swift in Sources */,
 				5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */,
 				A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */,
+				5FCAF4B22954D58C0016FC56 /* DateHelper.swift in Sources */,
 				A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */,
 				5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
 				A12CCE71295E141D00134E25 /* EntryListViewModel.swift in Sources */,
@@ -265,6 +273,7 @@
 				A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */,
 				A1C14622295A55B600A4C0A6 /* EntryDetailViewController.swift in Sources */,
 				A1C14624295A55DD00A4C0A6 /* EntryDetailViewModel.swift in Sources */,
+				5FCAF4B02953734D0016FC56 /* DailyQuoteViewModel.swift in Sources */,
 				5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */,
 				5F87A9C9294BA82A00B87CA4 /* DailyQuotesModel.swift in Sources */,
 				A1088A5A296758AE00C3A8F9 /* LocationService.swift in Sources */,
