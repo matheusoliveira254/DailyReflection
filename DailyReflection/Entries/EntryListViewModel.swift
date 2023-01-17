@@ -10,6 +10,7 @@ import Foundation
 class EntryListViewModel {
     
     var storage: EntryStorable
+    var entriesGroupReceived: [Entry] = []
     
     init(storage: EntryStorable = EntryStorage.sharedInstance) {
         self.storage = storage

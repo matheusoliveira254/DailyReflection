@@ -59,7 +59,7 @@
         <scene sceneID="jlL-sU-V1L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EI2-MJ-MIG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="smiley" catalog="system" id="mw4-MH-LFm"/>
+                    <tabBarItem key="tabBarItem" title="" image="newspaper" catalog="system" id="mw4-MH-LFm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyp-01-zf6">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -145,8 +145,8 @@
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="quote.opening" catalog="system" width="128" height="78"/>
-        <image name="smiley" catalog="system" width="128" height="123"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
     </resources>
 </document>

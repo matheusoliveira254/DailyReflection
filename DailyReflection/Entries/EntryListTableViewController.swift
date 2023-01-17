@@ -10,8 +10,9 @@ import CoreLocation
 
 class EntryListTableViewController: UITableViewController, CLLocationManagerDelegate {
 
-    private let viewModel = EntryListViewModel()
-
+    let viewModel = EntryListViewModel()
+    var indexOfGroup: Int?
+    
     override func viewWillAppear(_ animated: Bool) {
         viewModel.loadEntries()
         self.tableView.reloadData()
@@ -28,18 +29,22 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if viewModel.storage.entries.count <= 14 {
-            return viewModel.storage.entries.count
+        if indexOfGroup != nil {
+            return viewModel.storage.groupedEntries[indexOfGroup!].count
         } else {
-            return 14
+            if viewModel.storage.entries.count <= 14 {
+                return viewModel.storage.entries.count
+            } else {
+                return 14
+            }
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entriesCell", for: indexPath) as! EntryListTableViewCell
         let entry = viewModel.storage.entries[indexPath.row]
-        cell.configure(entry: entry)
-
+        indexOfGroup != nil ? cell.configure(entry: viewModel.storage.groupedEntries[indexOfGroup!][indexPath.row]) : cell.configure(entry: entry)
+            
         return cell
     }
 
@@ -61,7 +66,12 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
         } else if segue.identifier == "toEntryDetail" {
             guard let index = tableView.indexPathForSelectedRow else {return}
             let indexInt = index.row
-            let entryToSend = viewModel.storage.entries[index.row]
+            var entryToSend: Entry
+            if indexOfGroup != nil {
+                entryToSend = viewModel.storage.groupedEntries[indexOfGroup!][indexInt]
+            } else {
+                entryToSend = viewModel.storage.entries[index.row]
+            }
             destination.viewModel = EntryDetailViewModel(entry: entryToSend, entryIndex: indexInt)
         }
     }

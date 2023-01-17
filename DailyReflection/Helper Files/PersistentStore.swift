@@ -9,6 +9,7 @@ import Foundation
 
 protocol EntryStorable {
     var entries: [Entry] {get set}
+    var groupedEntries: [[Entry]] {get set}
     func save(_ entry: Entry)
     func update()
     func load()
@@ -17,6 +18,7 @@ protocol EntryStorable {
 class EntryStorage: EntryStorable {
     static let sharedInstance = EntryStorage()
     var entries: [Entry] = []
+    var groupedEntries: [[Entry]] = [[]]
     
     private var fileURL: URL? {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
@@ -34,10 +36,6 @@ class EntryStorage: EntryStorable {
         } catch let error {
             print("Error \(error)")
         }
-    }
-    
-    func saveWeather() {
-        
     }
     
     func update() {
@@ -61,3 +59,11 @@ class EntryStorage: EntryStorable {
         }
     }
 }//End of Class
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
+}
