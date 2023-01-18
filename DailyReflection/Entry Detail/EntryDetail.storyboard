@@ -64,7 +64,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did your day go? (500 words max)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-AV-mOH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did your day go?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-AV-mOH">
                                 <rect key="frame" x="10" y="304" width="373" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -111,6 +111,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dayScoreFaceFiveImageView" destination="VNh-5t-llm" id="jOX-T4-dUC"/>
+                        <outlet property="dayScoreFaceFourImageView" destination="0KT-nM-C7S" id="zte-hD-Ab9"/>
+                        <outlet property="dayScoreFaceOneImageView" destination="n1Z-17-Tfg" id="aBy-63-IBk"/>
+                        <outlet property="dayScoreFaceThreeImageView" destination="Eo4-cp-3GJ" id="gid-H7-EJU"/>
+                        <outlet property="dayScoreFaceTwoImageView" destination="A3V-hC-99p" id="21I-Uq-qSw"/>
                         <outlet property="entryDescriptionTextView" destination="xLz-9t-8yz" id="QXD-YE-5jF"/>
                         <outlet property="entryScoreSegmentedControl" destination="Sxr-Yv-mGb" id="GIK-bD-NlO"/>
                         <outlet property="entryTitleTextField" destination="B0G-2F-n8S" id="Hgs-da-fLH"/>

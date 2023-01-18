@@ -10,7 +10,7 @@
         <!--Entries-->
         <scene sceneID="6bM-Lj-wX2">
             <objects>
-                <tableViewController id="Sf5-eP-EYv" customClass="EntryListTableViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Entries" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sf5-eP-EYv" customClass="EntryListTableViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5Fh-GU-XcK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,14 +37,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fY-qL-f7v">
-                                            <rect key="frame" x="71" y="38" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fY-qL-f7v">
+                                            <rect key="frame" x="71" y="38" width="32.333333333333343" height="21"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                             <color key="textColor" systemColor="systemGrayColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7MI-Qj-8rG">
-                                            <rect key="frame" x="351" y="21.000000000000007" width="30" height="28.33333333333335"/>
+                                            <rect key="frame" x="351" y="21.000000000000004" width="30" height="28.333333333333339"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="VzR-xU-YJG"/>
@@ -68,7 +68,6 @@
                                         <constraint firstAttribute="trailing" secondItem="7MI-Qj-8rG" secondAttribute="trailing" constant="12" id="Rd1-d6-cNL"/>
                                         <constraint firstItem="nq6-wj-Yww" firstAttribute="top" secondItem="RK0-lD-sez" secondAttribute="top" constant="11" id="TIJ-Go-vD8"/>
                                         <constraint firstItem="nq6-wj-Yww" firstAttribute="leading" secondItem="RK0-lD-sez" secondAttribute="leading" constant="15" id="VEt-47-ate"/>
-                                        <constraint firstItem="1fY-qL-f7v" firstAttribute="top" secondItem="IPg-Zc-0mp" secondAttribute="bottom" constant="5" id="b2f-TZ-Kr5"/>
                                         <constraint firstItem="7MI-Qj-8rG" firstAttribute="top" secondItem="RK0-lD-sez" secondAttribute="top" constant="20" id="gMo-l3-KNL"/>
                                         <constraint firstItem="IPg-Zc-0mp" firstAttribute="top" secondItem="RK0-lD-sez" secondAttribute="topMargin" id="jyb-BZ-goN"/>
                                         <constraint firstItem="7MI-Qj-8rG" firstAttribute="leading" secondItem="99Y-50-UQ1" secondAttribute="trailing" constant="8" symbolic="YES" id="oNr-td-J1p"/>

@@ -7,26 +7,47 @@
 
 import UIKit
 import CoreLocation
+import CoreImage
 
-class EntryDetailViewController: UIViewController {
+class EntryDetailViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var entryTitleTextField: UITextField!
     @IBOutlet weak var entryDescriptionTextView: UITextView!
     @IBOutlet weak var entryScoreSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var dayScoreFaceOneImageView: UIImageView!
+    @IBOutlet weak var dayScoreFaceTwoImageView: UIImageView!
+    @IBOutlet weak var dayScoreFaceThreeImageView: UIImageView!
+    @IBOutlet weak var dayScoreFaceFourImageView: UIImageView!
+    @IBOutlet weak var dayScoreFaceFiveImageView: UIImageView!
     
     private let weatherService = WeatherService()
     private let locationService = LocationService()
     var viewModel: EntryDetailViewModel!
+    var hideBarButton: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         populateViews()
+        if entryDescriptionTextView.text == "Type Here..." {
+            entryDescriptionTextView.textColor = UIColor.lightGray
+        }
+        entryDescriptionTextView.delegate = self
+        DispatchQueue.main.async {
+            self.invertImageColor(imageView: self.dayScoreFaceOneImageView)
+            self.invertImageColor(imageView: self.dayScoreFaceTwoImageView)
+            self.invertImageColor(imageView: self.dayScoreFaceThreeImageView)
+            self.invertImageColor(imageView: self.dayScoreFaceFourImageView)
+            self.invertImageColor(imageView: self.dayScoreFaceFiveImageView)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         locationService.requestUpdatingLocation()
         locationService.authorizationCheck()
+        if hideBarButton != false {
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
@@ -36,6 +57,33 @@ class EntryDetailViewController: UIViewController {
         
         viewModel.saveEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription)
         navigationController?.popViewController(animated: true)
+    }
+    
+    func invertImageColor(imageView: UIImageView) {
+        guard let image = imageView.image else {return}
+        let context = CIContext()
+        let currentFilter = CIFilter(name: "CIColorInvert")
+        currentFilter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
+
+        if let output = currentFilter?.outputImage,
+           let cgimg = context.createCGImage(output, from: output.extent) {
+            let processedImage = UIImage(cgImage: cgimg)
+            imageView.image = processedImage
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if entryDescriptionTextView.textColor == UIColor.lightGray {
+            entryDescriptionTextView.text = nil
+            entryDescriptionTextView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if entryDescriptionTextView.text.isEmpty {
+            entryDescriptionTextView.text = "Type Here..."
+            entryDescriptionTextView.textColor = UIColor.lightGray
+        }
     }
     
     func populateViews() {
