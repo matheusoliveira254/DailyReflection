@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j7a-8j-HrI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notifications-->
+        <scene sceneID="XyC-Aa-IeM">
+            <objects>
+                <viewController id="j7a-8j-HrI" customClass="NotificationsDetailViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYo-Aa-UZn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Notifications for the Daily Quotes?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f15-jF-her">
+                                <rect key="frame" x="16" y="106" width="260" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZV-0a-Hmo">
+                                <rect key="frame" x="318" y="99" width="51" height="31"/>
+                                <connections>
+                                    <action selector="allowNotificationsToggle:" destination="j7a-8j-HrI" eventType="valueChanged" id="Pfz-vd-bwm"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-6v-4Gm">
+                                <rect key="frame" x="16" y="170" width="121" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVm-jO-0bI">
+                                <rect key="frame" x="95" y="231" width="134" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="d8d-bb-M9g"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="695058577.43338597">
+                                    <!--2023-01-10 15:49:37 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerChange:" destination="j7a-8j-HrI" eventType="valueChanged" id="VaZ-ip-C5M"/>
+                                </connections>
+                            </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4f-lY-x1z">
+                                <rect key="frame" x="0.0" y="309.33333333333331" width="393" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pyN-EZ-kSt"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to receive Journal reminders?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkT-Cj-VJs">
+                                <rect key="frame" x="16" y="351" width="274.66666666666669" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-OC-jwh">
+                                <rect key="frame" x="318" y="349.33333333333331" width="51" height="31"/>
+                                <connections>
+                                    <action selector="entryNotificationsToggle:" destination="j7a-8j-HrI" eventType="valueChanged" id="LpM-ji-DWD"/>
+                                </connections>
+                            </switch>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yar-GU-CDO">
+                                <rect key="frame" x="95" y="418" width="134" height="51"/>
+                                <date key="date" timeIntervalSinceReferenceDate="695680335.51489699">
+                                    <!--2023-01-17 20:32:15 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="entryDatePickerChange:" destination="j7a-8j-HrI" eventType="valueChanged" id="5Pk-d1-MNt"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vkO-4m-Wdd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f15-jF-her" firstAttribute="top" secondItem="vkO-4m-Wdd" secondAttribute="top" constant="47" id="1V0-Zg-PUr"/>
+                            <constraint firstItem="aVm-jO-0bI" firstAttribute="leading" secondItem="vkO-4m-Wdd" secondAttribute="leading" constant="95" id="1d0-mp-fJI"/>
+                            <constraint firstItem="Yar-GU-CDO" firstAttribute="trailing" secondItem="aVm-jO-0bI" secondAttribute="trailing" id="4n5-kj-m3C"/>
+                            <constraint firstItem="9TS-OC-jwh" firstAttribute="top" secondItem="O4f-lY-x1z" secondAttribute="bottom" constant="39" id="7qZ-5Y-Uta"/>
+                            <constraint firstItem="vkO-4m-Wdd" firstAttribute="trailing" secondItem="aVm-jO-0bI" secondAttribute="trailing" constant="164" id="9Rc-mP-3Hg"/>
+                            <constraint firstItem="EkT-Cj-VJs" firstAttribute="leading" secondItem="vkO-4m-Wdd" secondAttribute="leading" constant="16" id="9mS-ca-pZf"/>
+                            <constraint firstItem="vkO-4m-Wdd" firstAttribute="trailing" secondItem="9TS-OC-jwh" secondAttribute="trailing" constant="26" id="C2n-4o-Gdv"/>
+                            <constraint firstItem="vkO-4m-Wdd" firstAttribute="trailing" secondItem="C5u-6v-4Gm" secondAttribute="trailing" constant="256" id="Ge8-hn-hfc"/>
+                            <constraint firstItem="aVm-jO-0bI" firstAttribute="top" secondItem="yYo-Aa-UZn" secondAttribute="top" constant="231" id="PJm-mJ-G2H"/>
+                            <constraint firstAttribute="trailing" secondItem="O4f-lY-x1z" secondAttribute="trailing" id="Q2J-X3-nCo"/>
+                            <constraint firstItem="C5u-6v-4Gm" firstAttribute="leading" secondItem="vkO-4m-Wdd" secondAttribute="leading" constant="16" id="SWu-KK-ARH"/>
+                            <constraint firstItem="f15-jF-her" firstAttribute="leading" secondItem="vkO-4m-Wdd" secondAttribute="leading" constant="16" id="TXu-Ru-xI8"/>
+                            <constraint firstItem="vkO-4m-Wdd" firstAttribute="trailing" secondItem="fZV-0a-Hmo" secondAttribute="trailing" constant="26" id="XIs-A9-doR"/>
+                            <constraint firstItem="EkT-Cj-VJs" firstAttribute="top" secondItem="O4f-lY-x1z" secondAttribute="bottom" constant="40.670000000000002" id="YxU-ky-CIl"/>
+                            <constraint firstItem="O4f-lY-x1z" firstAttribute="top" secondItem="aVm-jO-0bI" secondAttribute="bottom" constant="39.333333333333314" id="fd1-se-JZk"/>
+                            <constraint firstItem="C5u-6v-4Gm" firstAttribute="top" secondItem="f15-jF-her" secondAttribute="bottom" constant="47" id="kEu-FT-QU8"/>
+                            <constraint firstItem="O4f-lY-x1z" firstAttribute="leading" secondItem="yYo-Aa-UZn" secondAttribute="leading" id="lew-d3-zkE"/>
+                            <constraint firstItem="vkO-4m-Wdd" firstAttribute="bottom" secondItem="EkT-Cj-VJs" secondAttribute="bottom" constant="450" id="sKL-WO-m0b"/>
+                            <constraint firstItem="Yar-GU-CDO" firstAttribute="leading" secondItem="aVm-jO-0bI" secondAttribute="leading" id="w1R-De-wcH"/>
+                            <constraint firstItem="vkO-4m-Wdd" firstAttribute="bottom" secondItem="Yar-GU-CDO" secondAttribute="bottom" constant="349" id="w32-e8-j0v"/>
+                            <constraint firstItem="Yar-GU-CDO" firstAttribute="top" secondItem="EkT-Cj-VJs" secondAttribute="bottom" constant="50" id="wmR-gb-zmj"/>
+                            <constraint firstItem="fZV-0a-Hmo" firstAttribute="top" secondItem="vkO-4m-Wdd" secondAttribute="top" constant="40" id="zKu-EX-mO6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="B8y-PP-qNd"/>
+                    <connections>
+                        <outlet property="AllowNotificationsLabel" destination="f15-jF-her" id="p4g-8k-dBx"/>
+                        <outlet property="entryDatePicker" destination="Yar-GU-CDO" id="Mbc-y6-7ih"/>
+                        <outlet property="entryNotificationsLabel" destination="EkT-Cj-VJs" id="a5p-0e-kEG"/>
+                        <outlet property="myDatePicker" destination="aVm-jO-0bI" id="fYs-mY-AjE"/>
+                        <outlet property="notificationTimeLabel" destination="C5u-6v-4Gm" id="oKT-aL-AAU"/>
+                        <outlet property="separatingView" destination="O4f-lY-x1z" id="drP-xq-bhy"/>
+                        <outlet property="toggleNotificationsSwitch" destination="fZV-0a-Hmo" id="Pzd-55-GMZ"/>
+                        <outlet property="toogleEntrySwitch" destination="9TS-OC-jwh" id="FhZ-yv-UqT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Etx-ob-dPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2173.2824427480914" y="-3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

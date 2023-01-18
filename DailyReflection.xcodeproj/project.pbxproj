@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F044F3A296609540046C455 /* DarkMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F044F39296609530046C455 /* DarkMode.storyboard */; };
+		5F6C07C62964AE1300FBA415 /* SettingsDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C07C52964AE1300FBA415 /* SettingsDataTableViewController.swift */; };
+		5F6C07C92964BC6800FBA415 /* TermsAndConditionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C07C82964BC6800FBA415 /* TermsAndConditionsTableViewCell.swift */; };
+		5F6C07CB2964BCB100FBA415 /* PrivacyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C07CA2964BCB100FBA415 /* PrivacyTableViewCell.swift */; };
+		5F6C07CD2964BCE100FBA415 /* DarkModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6C07CC2964BCE100FBA415 /* DarkModeTableViewCell.swift */; };
+		5F6C07D12966017C00FBA415 /* TermsAndConditions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F6C07D02966017C00FBA415 /* TermsAndConditions.storyboard */; };
+		5F6C07D42966041400FBA415 /* Privacy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F6C07D32966041400FBA415 /* Privacy.storyboard */; };
+		5F869FA0296CA03E008E83B1 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F869F9F296CA03E008E83B1 /* Notifications.storyboard */; };
+		5F869FB9296DCBF1008E83B1 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F869FB8296DCBF1008E83B1 /* NotificationsTableViewCell.swift */; };
+		5F869FBB296DD089008E83B1 /* NotificationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F869FBA296DD089008E83B1 /* NotificationsDetailViewController.swift */; };
 		5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9C4294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift */; };
 		5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9C6294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift */; };
 		5F87A9C9294BA82A00B87CA4 /* DailyQuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */; };
@@ -40,6 +50,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F044F39296609530046C455 /* DarkMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DarkMode.storyboard; sourceTree = "<group>"; };
+		5F6C07C52964AE1300FBA415 /* SettingsDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataTableViewController.swift; sourceTree = "<group>"; };
+		5F6C07C82964BC6800FBA415 /* TermsAndConditionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsTableViewCell.swift; sourceTree = "<group>"; };
+		5F6C07CA2964BCB100FBA415 /* PrivacyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyTableViewCell.swift; sourceTree = "<group>"; };
+		5F6C07CC2964BCE100FBA415 /* DarkModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeTableViewCell.swift; sourceTree = "<group>"; };
+		5F6C07D02966017C00FBA415 /* TermsAndConditions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsAndConditions.storyboard; sourceTree = "<group>"; };
+		5F6C07D32966041400FBA415 /* Privacy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Privacy.storyboard; sourceTree = "<group>"; };
+		5F869F9F296CA03E008E83B1 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+		5F869FB8296DCBF1008E83B1 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
+		5F869FBA296DD089008E83B1 /* NotificationsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsDetailViewController.swift; sourceTree = "<group>"; };
 		5F87A9C4294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuotesTableViewController.swift; sourceTree = "<group>"; };
 		5F87A9C6294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuoteTableViewCell.swift; sourceTree = "<group>"; };
 		5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuotesModel.swift; sourceTree = "<group>"; };
@@ -85,6 +105,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F044F38296605A10046C455 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				5F869F9F296CA03E008E83B1 /* Notifications.storyboard */,
+				5F869FB8296DCBF1008E83B1 /* NotificationsTableViewCell.swift */,
+				5F869FBA296DD089008E83B1 /* NotificationsDetailViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		5F044F3B2966095D0046C455 /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				5F044F39296609530046C455 /* DarkMode.storyboard */,
+				5F6C07CC2964BCE100FBA415 /* DarkModeTableViewCell.swift */,
+			);
+			path = DarkMode;
+			sourceTree = "<group>";
+		};
+		5F6C07C72964B7F800FBA415 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */,
+				5F6C07C52964AE1300FBA415 /* SettingsDataTableViewController.swift */,
+				5F6C07D22966019500FBA415 /* TermsAndConditions */,
+				5F6C07D52966049500FBA415 /* New Group */,
+				5F044F3B2966095D0046C455 /* DarkMode */,
+				5F044F38296605A10046C455 /* Notifications */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5F6C07D22966019500FBA415 /* TermsAndConditions */ = {
+			isa = PBXGroup;
+			children = (
+				5F6C07D02966017C00FBA415 /* TermsAndConditions.storyboard */,
+				5F6C07C82964BC6800FBA415 /* TermsAndConditionsTableViewCell.swift */,
+			);
+			path = TermsAndConditions;
+			sourceTree = "<group>";
+		};
+		5F6C07D52966049500FBA415 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				5F6C07CA2964BCB100FBA415 /* PrivacyTableViewCell.swift */,
+				5F6C07D32966041400FBA415 /* Privacy.storyboard */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		5F87A9C3294BA11B00B87CA4 /* DailyQuotes */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +225,9 @@
 				A12BC5BF294A8D5600D5FFD5 /* Entries */,
 				A144A9BB2954D91B004B9874 /* Entry Detail */,
 				A12BC5B1294A220700D5FFD5 /* PastEntries.storyboard */,
-				A12BC5B5294A22EB00D5FFD5 /* Settings.storyboard */,
 				A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */,
 				A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */,
+				5F6C07C72964B7F800FBA415 /* Settings */,
 				5F87A9C3294BA11B00B87CA4 /* DailyQuotes */,
 				5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */,
 				A1011E8E294BA98C005C708B /* Weather.swift */,
@@ -241,11 +311,15 @@
 				A1C14620295A086500A4C0A6 /* EntryDetail.storyboard in Resources */,
 				A12BC5B8294A3E5B00D5FFD5 /* PastEntriesList.storyboard in Resources */,
 				A12BC5B6294A22EB00D5FFD5 /* Settings.storyboard in Resources */,
+				5F044F3A296609540046C455 /* DarkMode.storyboard in Resources */,
 				A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */,
 				A12BC5BA294A3EA800D5FFD5 /* PastEntriesDetails.storyboard in Resources */,
+				5F6C07D12966017C00FBA415 /* TermsAndConditions.storyboard in Resources */,
 				A12BC5B2294A220700D5FFD5 /* PastEntries.storyboard in Resources */,
 				A1BE5DCD2947C9D7002EFFFB /* Main.storyboard in Resources */,
+				5F869FA0296CA03E008E83B1 /* Notifications.storyboard in Resources */,
 				A1BE5DDB294A1EA7002EFFFB /* Entries.storyboard in Resources */,
+				5F6C07D42966041400FBA415 /* Privacy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,17 +335,23 @@
 				A1E49600295232A60000419D /* Entry.swift in Sources */,
 				A1011E8F294BA98C005C708B /* Weather.swift in Sources */,
 				5FCAF4AA295233700016FC56 /* ResultError.swift in Sources */,
+				5F869FB9296DCBF1008E83B1 /* NotificationsTableViewCell.swift in Sources */,
 				A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */,
+				5F869FBB296DD089008E83B1 /* NotificationsDetailViewController.swift in Sources */,
 				5FCAF4B22954D58C0016FC56 /* DateHelper.swift in Sources */,
 				A1BE5DCA2947C9D7002EFFFB /* ViewController.swift in Sources */,
 				5F87A9C7294BA1E500B87CA4 /* DailyQuoteTableViewCell.swift in Sources */,
 				A12CCE71295E141D00134E25 /* EntryListViewModel.swift in Sources */,
 				A1BE5DC62947C9D7002EFFFB /* AppDelegate.swift in Sources */,
+				5F6C07C62964AE1300FBA415 /* SettingsDataTableViewController.swift in Sources */,
+				5F6C07C92964BC6800FBA415 /* TermsAndConditionsTableViewCell.swift in Sources */,
 				A1FCD555296CB58000424E26 /* WeatherService.swift in Sources */,
 				A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */,
 				A1C14622295A55B600A4C0A6 /* EntryDetailViewController.swift in Sources */,
 				A1C14624295A55DD00A4C0A6 /* EntryDetailViewModel.swift in Sources */,
 				5FCAF4B02953734D0016FC56 /* DailyQuoteViewModel.swift in Sources */,
+				5F6C07CB2964BCB100FBA415 /* PrivacyTableViewCell.swift in Sources */,
+				5F6C07CD2964BCE100FBA415 /* DarkModeTableViewCell.swift in Sources */,
 				5F87A9C5294BA1CF00B87CA4 /* DailyQuotesTableViewController.swift in Sources */,
 				5F87A9C9294BA82A00B87CA4 /* DailyQuotesModel.swift in Sources */,
 				A1088A5A296758AE00C3A8F9 /* LocationService.swift in Sources */,
@@ -422,7 +502,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WHCBWLCWQ4;
+				DEVELOPMENT_TEAM = 54AAP7P8JH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyReflection/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -451,7 +531,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WHCBWLCWQ4;
+				DEVELOPMENT_TEAM = 54AAP7P8JH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyReflection/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
