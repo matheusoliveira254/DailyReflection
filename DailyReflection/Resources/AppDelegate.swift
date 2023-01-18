@@ -11,43 +11,11 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,  UNUserNotificationCenterDelegate {
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        LocationService().authorizationCheck()
         
-        UNUserNotificationCenter.current().delegate = self
-                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-                    if granted {
-                        print("User gave permissions for local notifications")
-                    }
-                }
-        // Override point for customization after application launch.
-//        NetworkController.fetchQod { result in
-//            switch result {
-//            case.success(let quoteOfDay):
-//                print(quoteOfDay.quotes)
-//
-//            case.failure(let error):
-//                print(error)
-//            }
-//        }
-        
-
-        print(URL.documentsDirectory)
         return true
-    }
-    
-    func application(_ application: UIApplication, shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
-        coder.encode(11.0,forKey: "quotesInfo")
-//        NetworkController.fetchWeatherInfo(location: "Salt Lake,UT") { result in
-//            switch result {
-//            case .success(let weather):
-//                print("Today's weather is \(weather)")
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        return true
-    }
+}
 
     // MARK: UISceneSession Lifecycle
 

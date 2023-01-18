@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Entry-->
+        <!--Entry Detail-->
         <scene sceneID="Cu7-b6-v8I">
             <objects>
-                <viewController id="7G6-L9-lFK" sceneMemberID="viewController">
+                <viewController id="7G6-L9-lFK" customClass="EntryDetailViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xpm-Lq-sU0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,12 +23,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0G-2F-n8S">
-                                <rect key="frame" x="16" y="115" width="356" height="34"/>
+                                <rect key="frame" x="16" y="115" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sxr-Yv-mGb">
-                                <rect key="frame" x="16" y="237" width="356" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="4" translatesAutoresizingMaskIntoConstraints="NO" id="Sxr-Yv-mGb">
+                                <rect key="frame" x="16" y="237" width="361" height="32"/>
                                 <segments>
                                     <segment title="1"/>
                                     <segment title="2"/>
@@ -36,43 +36,44 @@
                                     <segment title="4"/>
                                     <segment title="5"/>
                                 </segments>
+                                <connections>
+                                    <action selector="entryScoreValueChangedSegmentedControl:" destination="7G6-L9-lFK" eventType="valueChanged" id="TMC-Se-NKe"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oUO-mw-h0t">
-                                <rect key="frame" x="20" y="177" width="348" height="52"/>
+                                <rect key="frame" x="20" y="177" width="353" height="52"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="n1Z-17-Tfg">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="52"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="A3V-hC-99p">
-                                        <rect key="frame" x="72" y="0.0" width="60" height="52"/>
+                                        <rect key="frame" x="73" y="0.0" width="61" height="52"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 2" translatesAutoresizingMaskIntoConstraints="NO" id="Eo4-cp-3GJ">
-                                        <rect key="frame" x="144" y="0.0" width="60" height="52"/>
+                                        <rect key="frame" x="146" y="0.0" width="61" height="52"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 3" translatesAutoresizingMaskIntoConstraints="NO" id="0KT-nM-C7S">
-                                        <rect key="frame" x="216" y="0.0" width="60" height="52"/>
+                                        <rect key="frame" x="219" y="0.0" width="61" height="52"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 4" translatesAutoresizingMaskIntoConstraints="NO" id="VNh-5t-llm">
-                                        <rect key="frame" x="288" y="0.0" width="60" height="52"/>
+                                        <rect key="frame" x="292" y="0.0" width="61" height="52"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Lfw-fI-955"/>
                                             <constraint firstAttribute="height" constant="52" id="k8g-ON-AOz"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did your day go? (500 words max)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUQ-AV-mOH">
-                                <rect key="frame" x="10" y="304" width="368" height="24"/>
+                                <rect key="frame" x="10" y="304" width="373" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-9t-8yz">
-                                <rect key="frame" x="14" y="336" width="361" height="361"/>
+                                <rect key="frame" x="14" y="336" width="366" height="361"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="361" id="YW4-Ko-pPi"/>
                                     <constraint firstAttribute="height" constant="361" id="jzO-6a-9NK"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -102,13 +103,22 @@
                             <constraint firstItem="B0G-2F-n8S" firstAttribute="top" secondItem="agL-w6-caR" secondAttribute="bottom" constant="8" symbolic="YES" id="rFT-vz-HRl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Entry" id="qJe-9t-45Z">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jDI-S9-VpQ"/>
+                    <navigationItem key="navigationItem" title="Entry Detail" id="qJe-9t-45Z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="jDI-S9-VpQ">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="7G6-L9-lFK" id="fA9-b1-DlK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="entryDescriptionTextView" destination="xLz-9t-8yz" id="QXD-YE-5jF"/>
+                        <outlet property="entryScoreSegmentedControl" destination="Sxr-Yv-mGb" id="GIK-bD-NlO"/>
+                        <outlet property="entryTitleTextField" destination="B0G-2F-n8S" id="Hgs-da-fLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vVo-2q-rL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4307.6335877862593" y="-371.12676056338029"/>
+            <point key="canvasLocation" x="7086.2595419847321" y="-371.12676056338029"/>
         </scene>
     </scenes>
     <resources>
