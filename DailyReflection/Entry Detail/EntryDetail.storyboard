@@ -111,6 +111,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dayScoreFaceFiveImageView" destination="VNh-5t-llm" id="jOX-T4-dUC"/>
+                        <outlet property="dayScoreFaceFourImageView" destination="0KT-nM-C7S" id="zte-hD-Ab9"/>
+                        <outlet property="dayScoreFaceOneImageView" destination="n1Z-17-Tfg" id="aBy-63-IBk"/>
+                        <outlet property="dayScoreFaceThreeImageView" destination="Eo4-cp-3GJ" id="gid-H7-EJU"/>
+                        <outlet property="dayScoreFaceTwoImageView" destination="A3V-hC-99p" id="21I-Uq-qSw"/>
                         <outlet property="entryDescriptionTextView" destination="xLz-9t-8yz" id="QXD-YE-5jF"/>
                         <outlet property="entryScoreSegmentedControl" destination="Sxr-Yv-mGb" id="GIK-bD-NlO"/>
                         <outlet property="entryTitleTextField" destination="B0G-2F-n8S" id="Hgs-da-fLH"/>
