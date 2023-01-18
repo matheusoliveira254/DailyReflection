@@ -17,6 +17,7 @@ class EntryDetailViewController: UIViewController {
     private let weatherService = WeatherService()
     private let locationService = LocationService()
     var viewModel: EntryDetailViewModel!
+    var hideBarButton: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,9 @@ class EntryDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         locationService.requestUpdatingLocation()
         locationService.authorizationCheck()
+        if hideBarButton != false {
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
 
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {

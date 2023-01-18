@@ -69,6 +69,7 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
             var entryToSend: Entry
             if indexOfGroup != nil {
                 entryToSend = viewModel.storage.groupedEntries[indexOfGroup!][indexInt]
+                destination.hideBarButton = true
             } else {
                 entryToSend = viewModel.storage.entries[index.row]
             }
