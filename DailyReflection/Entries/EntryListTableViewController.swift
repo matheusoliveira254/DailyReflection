@@ -32,11 +32,11 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
         if indexOfGroup != nil {
             return viewModel.storage.groupedEntries[indexOfGroup!].count
         } else {
-            if viewModel.storage.entries.count <= 14 {
+//            if viewModel.storage.entries.count <= 14 {
                 return viewModel.storage.entries.count
-            } else {
-                return 14
-            }
+//            } else {
+//                return 14
+//            }
         }
     }
 
@@ -50,9 +50,11 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            viewModel.deleteEntry(index: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+        if indexOfGroup == nil {
+            if editingStyle == .delete {
+                viewModel.deleteEntry(index: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
         }
     }
     

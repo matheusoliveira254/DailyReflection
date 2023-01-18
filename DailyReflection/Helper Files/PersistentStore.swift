@@ -13,6 +13,7 @@ protocol EntryStorable {
     func save(_ entry: Entry)
     func update()
     func load()
+    func groupEntries()
 }
 
 class EntryStorage: EntryStorable {
@@ -57,6 +58,10 @@ class EntryStorage: EntryStorable {
         } catch let error {
             print("Error \(error)")
         }
+    }
+    
+    func groupEntries() {
+        groupedEntries = entries.chunked(into: 7)
     }
 }//End of Class
 

@@ -18,21 +18,16 @@ class PastEntriesViewController: UIViewController {
         viewModel = PastEntriesViewModel()
         pastEntriesCollectionView.dataSource = self
         pastEntriesCollectionView.delegate = self
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        pastEntriesCollectionView.reloadData()
+        viewModel.storage.groupEntries()
+        DispatchQueue.main.async {
+            self.pastEntriesCollectionView.reloadData()
+        }
     }
-
-//    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "toPastEntriesListVC",
-//              let cell = sender as? PastEntriesCollectionViewCell,
-//              let indexPath = pastEntriesCollectionView.indexPath(for: cell),
-//              let destinationVC = segue.destination as? EntryListTableViewController else {return}
-//        destinationVC.viewModel.entriesGroupReceived = viewModel.storage.groupedEntries[indexPath.row]
-//    }
 }//End of class
 
 extension PastEntriesViewController: UICollectionViewDelegate, UICollectionViewDataSource {

@@ -13,7 +13,5 @@ class PastEntriesViewModel {
     
     init(storage: EntryStorable = EntryStorage.sharedInstance) {
         self.storage = storage
-        let grouping = storage.entries.chunked(into: 7)
-        self.storage.groupedEntries = grouping
     }
 }//End of class
