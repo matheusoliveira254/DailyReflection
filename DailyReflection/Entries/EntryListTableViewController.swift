@@ -48,13 +48,19 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexOfGroup != nil {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if indexOfGroup == nil {
             if editingStyle == .delete {
                 viewModel.deleteEntry(index: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
-            }
         }
     }
     

@@ -18,7 +18,6 @@ class PastEntriesViewController: UIViewController {
         viewModel = PastEntriesViewModel()
         pastEntriesCollectionView.dataSource = self
         pastEntriesCollectionView.delegate = self
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
