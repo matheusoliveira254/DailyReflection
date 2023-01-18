@@ -32,11 +32,11 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
         if indexOfGroup != nil {
             return viewModel.storage.groupedEntries[indexOfGroup!].count
         } else {
-//            if viewModel.storage.entries.count <= 14 {
+            if viewModel.storage.entries.count <= 14 {
                 return viewModel.storage.entries.count
-//            } else {
-//                return 14
-//            }
+            } else {
+                return 14
+            }
         }
     }
 

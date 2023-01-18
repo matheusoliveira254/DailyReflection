@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 
-class EntryDetailViewController: UIViewController {
+class EntryDetailViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var entryTitleTextField: UITextField!
     @IBOutlet weak var entryDescriptionTextView: UITextView!
@@ -22,6 +22,10 @@ class EntryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateViews()
+        if entryDescriptionTextView.text == "Type Here..." {
+            entryDescriptionTextView.textColor = UIColor.lightGray
+        }
+        entryDescriptionTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +44,20 @@ class EntryDetailViewController: UIViewController {
         
         viewModel.saveEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription)
         navigationController?.popViewController(animated: true)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if entryDescriptionTextView.textColor == UIColor.lightGray {
+            entryDescriptionTextView.text = nil
+            entryDescriptionTextView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if entryDescriptionTextView.text.isEmpty {
+            entryDescriptionTextView.text = "Type Here..."
+            entryDescriptionTextView.textColor = UIColor.lightGray
+        }
     }
     
     func populateViews() {
