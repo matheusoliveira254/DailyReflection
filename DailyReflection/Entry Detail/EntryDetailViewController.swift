@@ -32,12 +32,14 @@ class EntryDetailViewController: UIViewController, UITextViewDelegate {
             entryDescriptionTextView.textColor = UIColor.lightGray
         }
         entryDescriptionTextView.delegate = self
-        DispatchQueue.main.async {
-            self.invertImageColor(imageView: self.dayScoreFaceOneImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceTwoImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceThreeImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceFourImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceFiveImageView)
+        if UserDefaults.standard.bool(forKey: "isDarkModeOn") == true {
+            DispatchQueue.main.async {
+                self.invertImageColor(imageView: self.dayScoreFaceOneImageView)
+                self.invertImageColor(imageView: self.dayScoreFaceTwoImageView)
+                self.invertImageColor(imageView: self.dayScoreFaceThreeImageView)
+                self.invertImageColor(imageView: self.dayScoreFaceFourImageView)
+                self.invertImageColor(imageView: self.dayScoreFaceFiveImageView)
+            }
         }
     }
     
@@ -75,7 +77,9 @@ class EntryDetailViewController: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if entryDescriptionTextView.textColor == UIColor.lightGray {
             entryDescriptionTextView.text = nil
-            entryDescriptionTextView.textColor = UIColor.black
+            if UserDefaults.standard.bool(forKey: "isDarkModeOn") != true {
+                entryDescriptionTextView.textColor = UIColor.black
+            }
         }
     }
     

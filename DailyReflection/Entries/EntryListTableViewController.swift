@@ -43,8 +43,14 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entriesCell", for: indexPath) as! EntryListTableViewCell
         let entry = viewModel.storage.entries[indexPath.row]
+        if UserDefaults.standard.bool(forKey: "isDarkModeOn") == true {
+            cell.weatherIconEntryListCellImageView.tintColor = UIColor.gray
+            cell.moonIconEntryListImageView.tintColor = UIColor.gray
+        } else {
+            cell.weatherIconEntryListCellImageView.tintColor = UIColor.black
+            cell.moonIconEntryListImageView.tintColor = UIColor.black
+        }
         indexOfGroup != nil ? cell.configure(entry: viewModel.storage.groupedEntries[indexOfGroup!][indexPath.row]) : cell.configure(entry: entry)
-            
         return cell
     }
 

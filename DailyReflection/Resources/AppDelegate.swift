@@ -10,10 +10,10 @@ import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,  UNUserNotificationCenterDelegate {
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        var window = UIWindow(frame: UIScreen.main.bounds)
         LocationService().authorizationCheck()
-        
         return true
 }
 
