@@ -20,6 +20,10 @@ class EntryListTableViewCell: UITableViewCell {
         entryTitleEntryListCellLabel.text = entry.title
         entryDateEntryListCellLabel.text = entry.date.toString()
         dayScoreEntryListCellLabel.text = "\(entry.dayScore)/5"
-        weatherIconEntryListCellImageView.image = UIImage(named: entry.weather)
+        if entry.weather != "sun.max.fill" {
+            weatherIconEntryListCellImageView.image = UIImage(named: entry.weather)
+        } else {
+            weatherIconEntryListCellImageView.image = UIImage(systemName: entry.weather)
+        }
     }
 }
