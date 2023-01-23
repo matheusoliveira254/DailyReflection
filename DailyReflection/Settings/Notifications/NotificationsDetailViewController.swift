@@ -20,14 +20,15 @@ class NotificationsDetailViewController: UIViewController {
     @IBOutlet weak var entryDatePicker: UIDatePicker!
     
     // MARK: - Properties
+    
     var date = Date()
     var notificationTime = "quoteNotificationTime"
     var journalNotificationTime = "jornalNotification"
     var dailyQuoteCenter = UNUserNotificationCenter.current()
     lazy var dailyQuoteContent: UNMutableNotificationContent = {
         let content = UNMutableNotificationContent()
-        content.title = "Daily Quote Notification"
-        content.body = "This is a daily quote notification"
+        content.title = "Daily Quote"
+        content.body = "Open the App to check out today's quote!"
         content.sound = .default
         content.userInfo = ["value": "Data with local notification"]
         
@@ -37,8 +38,8 @@ class NotificationsDetailViewController: UIViewController {
     var journalCenter = UNUserNotificationCenter.current()
     lazy var journalNewContent: UNMutableNotificationContent = {
         let newContent = UNMutableNotificationContent()
-        newContent.title = "Entry Notification"
-        newContent.body = "Journal entry notification"
+        newContent.title = "How did your day go?"
+        newContent.body = "Don't forget to record today's memories."
         newContent.sound = .default
         newContent.userInfo = ["value": "Data with local notification"]
         
@@ -47,6 +48,11 @@ class NotificationsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.bool(forKey: "notificationsAllowed") != true {
+            toggleNotificationsSwitch.isOn = false
+            toogleEntrySwitch.isOn = false
+        }
         
         if let notificationTime = UserDefaults.standard.object(forKey: notificationTime) as? Data,
            let time = try? JSONDecoder().decode(DateComponents.self, from: notificationTime),
@@ -59,21 +65,9 @@ class NotificationsDetailViewController: UIViewController {
             entryDatePicker.date = newDate
         }
     }
-    
-    //  step 1 - hacer que la noficacion triggers cuando el user cambier la hora siempre y cuando el switch este encendido.
-    // how do i activate the notification when the user changes the time if the switch is on
-    
+
     @IBAction func allowNotificationsToggle(_ sender: Any) {
         if toggleNotificationsSwitch.isOn {
-            
-//            let center = UNUserNotificationCenter.current()
-//            let content = UNMutableNotificationContent()
-//
-//            content.title = "Daily Quote Notification"
-//            content.body = "This is a daily quote notification"
-//            content.sound = .default
-//            content.userInfo = ["value": "Data with local notification"]
-            
             let fireDate = Calendar.current.dateComponents([.hour, .minute, .second], from: myDatePicker.date.addingTimeInterval(0))
             UserDefaults.standard.set(fireDate.toData(), forKey: notificationTime)
             if let notificationTime = UserDefaults.standard.object(forKey: notificationTime) as? Data,
@@ -94,15 +88,7 @@ class NotificationsDetailViewController: UIViewController {
     
     @IBAction func entryNotificationsToggle(_ sender: Any) {
         
-        
         if toogleEntrySwitch.isOn {
-//            let newCenter = UNUserNotificationCenter.current()
-//            let newContent = UNMutableNotificationContent()
-//            newContent.title = "Entry Notification"
-//            newContent.body = "Journal entry notification"
-//            newContent.sound = .default
-//            newContent.userInfo = ["value": "Data with local notification"]
-            
             let newFireDate = Calendar.current.dateComponents([.hour, .minute, .second], from: entryDatePicker.date.addingTimeInterval(0))
             UserDefaults.standard.set(newFireDate.toData(), forKey: journalNotificationTime)
             if let journalNotificationTime = UserDefaults.standard.object(forKey: journalNotificationTime) as? Data,
@@ -119,7 +105,6 @@ class NotificationsDetailViewController: UIViewController {
     }
     
     @IBAction func datePickerChange(_ sender: Any) {
-        
         allowNotificationsToggle( (Any).self)
         toggleNotificationsSwitch.isOn = true
     }
@@ -129,10 +114,5 @@ class NotificationsDetailViewController: UIViewController {
         toogleEntrySwitch.isOn = true
         let newFireDate = Calendar.current.dateComponents([.hour, .minute, .second], from: entryDatePicker.date.addingTimeInterval(20))
         UserDefaults.standard.set(newFireDate.toData(), forKey: journalNotificationTime)
-
     }
 }// End of class.
-
-
-//  step 1 - hacer que la noficacion triggers cuando el user cambier la hora siempre y cuando el switch este encendido.
-// step 2 - Set a time for the user to receive a notification every day on both notifications.

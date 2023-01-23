@@ -9,9 +9,19 @@ import UIKit
 import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate,  UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UNUserNotificationCenter.current().delegate = self
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+                    if granted {
+                        UserDefaults.standard.set(true, forKey: "notificationsAllowed")
+                        print("User gave permissions for local notifications")
+                    } else {
+                        UserDefaults.standard.set(false, forKey: "notificationsAllowed")
+                        print("User denied permissions for local notifications")
+                    }
+                }
         LocationService().authorizationCheck()
         return true
 }

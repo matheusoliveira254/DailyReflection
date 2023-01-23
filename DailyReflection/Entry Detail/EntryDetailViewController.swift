@@ -42,7 +42,7 @@ class EntryDetailViewController: UIViewController, UITextViewDelegate {
             self.navigationItem.rightBarButtonItem = nil
         }
     }
-
+    
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         guard let newEntryTitle = entryTitleTextField.text,
               let newEntryDescription = entryDescriptionTextView.text else {return}
