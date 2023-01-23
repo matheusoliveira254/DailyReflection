@@ -41,5 +41,3 @@ extension DateComponents {
         try? JSONEncoder().encode(self)
     }
 }
-
-

@@ -28,8 +28,6 @@
 		A10DE1852978A61A0099E023 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10DE1842978A61A0099E023 /* Settings.storyboard */; };
 		A10DE18B2978BF890099E023 /* DarkModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DE18A2978BF890099E023 /* DarkModeTableViewCell.swift */; };
 		A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */; };
-		A12BC5B8294A3E5B00D5FFD5 /* PastEntriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */; };
-		A12BC5BA294A3EA800D5FFD5 /* PastEntriesDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */; };
 		A12BC5BC294A858D00D5FFD5 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */; };
 		A12BC5BE294A8D4400D5FFD5 /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */; };
 		A12CCE71295E141D00134E25 /* EntryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CCE70295E141D00134E25 /* EntryListViewModel.swift */; };
@@ -73,8 +71,6 @@
 		A10DE1892978A8A10099E023 /* DailyReflection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyReflection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10DE18A2978BF890099E023 /* DarkModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeTableViewCell.swift; sourceTree = "<group>"; };
 		A12BC5B3294A22A300D5FFD5 /* DailyQuotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuotes.storyboard; sourceTree = "<group>"; };
-		A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntriesList.storyboard; sourceTree = "<group>"; };
-		A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastEntriesDetails.storyboard; sourceTree = "<group>"; };
 		A12BC5BB294A858D00D5FFD5 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 		A12BC5BD294A8D4400D5FFD5 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewCell.swift; sourceTree = "<group>"; };
 		A12CCE70295E141D00134E25 /* EntryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewModel.swift; sourceTree = "<group>"; };
@@ -174,6 +170,7 @@
 				A1088A5629674EC600C3A8F9 /* PersistentStore.swift */,
 				A1088A59296758AD00C3A8F9 /* LocationService.swift */,
 				A1FCD554296CB58000424E26 /* WeatherService.swift */,
+				5FCAF4B12954D58C0016FC56 /* DateHelper.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -230,18 +227,13 @@
 				5FCAF4A8295224F90016FC56 /* Network */,
 				A1088A5829674ECC00C3A8F9 /* Helper Files */,
 				A1BE5DD92947CA00002EFFFB /* Resources */,
+				A1CD958D297EFDC900A7749D /* Models */,
 				A10DE1832978A4FB0099E023 /* Main Storyboards */,
 				A12BC5BF294A8D5600D5FFD5 /* Entries */,
 				A144A9BB2954D91B004B9874 /* Entry Detail */,
 				A1C87FE3296F2FDC00F51DC6 /* Past Entries */,
-				A12BC5B7294A3E5B00D5FFD5 /* PastEntriesList.storyboard */,
-				A12BC5B9294A3EA800D5FFD5 /* PastEntriesDetails.storyboard */,
 				5F6C07C72964B7F800FBA415 /* Settings */,
 				5F87A9C3294BA11B00B87CA4 /* DailyQuotes */,
-				5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */,
-				A1011E8E294BA98C005C708B /* Weather.swift */,
-				A1E495FF295232A60000419D /* Entry.swift */,
-				5FCAF4B12954D58C0016FC56 /* DateHelper.swift */,
 			);
 			path = DailyReflection;
 			sourceTree = "<group>";
@@ -266,6 +258,16 @@
 				A1C87FEA296F344700F51DC6 /* PastEntriesViewModel.swift */,
 			);
 			path = "Past Entries";
+			sourceTree = "<group>";
+		};
+		A1CD958D297EFDC900A7749D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F87A9C8294BA82A00B87CA4 /* DailyQuotesModel.swift */,
+				A1011E8E294BA98C005C708B /* Weather.swift */,
+				A1E495FF295232A60000419D /* Entry.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,9 +332,7 @@
 				A1C87FE2296F2FD700F51DC6 /* PastEntries.storyboard in Resources */,
 				A1BE5DCF2947C9D9002EFFFB /* Assets.xcassets in Resources */,
 				A1C14620295A086500A4C0A6 /* EntryDetail.storyboard in Resources */,
-				A12BC5B8294A3E5B00D5FFD5 /* PastEntriesList.storyboard in Resources */,
 				A12BC5B4294A22A300D5FFD5 /* DailyQuotes.storyboard in Resources */,
-				A12BC5BA294A3EA800D5FFD5 /* PastEntriesDetails.storyboard in Resources */,
 				5F6C07D12966017C00FBA415 /* TermsAndConditions.storyboard in Resources */,
 				A1BE5DCD2947C9D7002EFFFB /* Main.storyboard in Resources */,
 				5F869FA0296CA03E008E83B1 /* Notifications.storyboard in Resources */,
