@@ -47,7 +47,7 @@ struct NetworkController {
         
         guard let city = city?.replacingOccurrences(of: " ", with: "_") else {return}
         guard let state = state else {return}
-        let WeatherUrl = "https://api.weatherbit.io/v2.0/current/daily?city=\(city),\(state)&key=7592672ff4534749b7736a1c4f5e30f3"
+        let WeatherUrl = "https://api.weatherbit.io/v2.0/current/daily?city=\(city),\(state)&key=e2841c3cfd1d437bb3722be25783f6c8"
         guard let finalWeatherUrl = URL(string: WeatherUrl) else {completion(.failure(.badURL)); return}
         
         URLSession.shared.dataTask(with: finalWeatherUrl) { data, _, error in

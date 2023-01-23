@@ -32,13 +32,6 @@ class EntryDetailViewController: UIViewController, UITextViewDelegate {
             entryDescriptionTextView.textColor = UIColor.lightGray
         }
         entryDescriptionTextView.delegate = self
-        DispatchQueue.main.async {
-            self.invertImageColor(imageView: self.dayScoreFaceOneImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceTwoImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceThreeImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceFourImageView)
-            self.invertImageColor(imageView: self.dayScoreFaceFiveImageView)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,23 +52,12 @@ class EntryDetailViewController: UIViewController, UITextViewDelegate {
         navigationController?.popViewController(animated: true)
     }
     
-    func invertImageColor(imageView: UIImageView) {
-        guard let image = imageView.image else {return}
-        let context = CIContext()
-        let currentFilter = CIFilter(name: "CIColorInvert")
-        currentFilter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
-
-        if let output = currentFilter?.outputImage,
-           let cgimg = context.createCGImage(output, from: output.extent) {
-            let processedImage = UIImage(cgImage: cgimg)
-            imageView.image = processedImage
-        }
-    }
-    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if entryDescriptionTextView.textColor == UIColor.lightGray {
             entryDescriptionTextView.text = nil
-            entryDescriptionTextView.textColor = UIColor.black
+            if UserDefaults.standard.bool(forKey: "isDarkModeOn") != true {
+                entryDescriptionTextView.textColor = UIColor.black
+            }
         }
     }
     

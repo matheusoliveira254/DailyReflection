@@ -8,11 +8,13 @@
 import UIKit
 
 class SettingsDataTableViewController: UITableViewController {
-
+    
+    var isDarkModeOn: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.reloadData()
-        
+        isDarkModeOn = UserDefaults.standard.bool(forKey: "isDarkModeOn")
     }
 
     // MARK: - Table view data source
@@ -21,7 +23,6 @@ class SettingsDataTableViewController: UITableViewController {
         return 4
     }
 
-   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "termsAndConditionsCell", for: indexPath)
@@ -33,7 +34,13 @@ class SettingsDataTableViewController: UITableViewController {
         }
         
         if indexPath.row == 2 {
-            let darkModeCell = tableView.dequeueReusableCell(withIdentifier: "darkModeCell", for: indexPath)
+            let darkModeCell = tableView.dequeueReusableCell(withIdentifier: "darkModeCell", for: indexPath) as! DarkModeTableViewCell
+            
+            if self.isDarkModeOn == true {
+                darkModeCell.darkModeSwitch.isOn = true
+            } else {
+                darkModeCell.darkModeSwitch.isOn = false
+            }
             return darkModeCell
         }
         
@@ -45,7 +52,6 @@ class SettingsDataTableViewController: UITableViewController {
             
         return UITableViewCell()
     }
-    
 
     /*
     // Override to support conditional editing of the table view.
