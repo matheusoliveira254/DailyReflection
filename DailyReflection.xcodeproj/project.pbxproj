@@ -138,8 +138,8 @@
 		5F6C07D52966049500FBA415 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				5F6C07CA2964BCB100FBA415 /* PrivacyTableViewCell.swift */,
 				5F6C07D32966041400FBA415 /* Privacy.storyboard */,
+				5F6C07CA2964BCB100FBA415 /* PrivacyTableViewCell.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";

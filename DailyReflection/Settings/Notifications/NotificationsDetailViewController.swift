@@ -26,7 +26,7 @@ class NotificationsDetailViewController: UIViewController {
     var dailyQuoteCenter = UNUserNotificationCenter.current()
     lazy var dailyQuoteContent: UNMutableNotificationContent = {
         let content = UNMutableNotificationContent()
-        content.title = "Daily Quote Notification"
+        content.title = "Daily Quote"
         content.body = "This is a daily quote notification"
         content.sound = .default
         content.userInfo = ["value": "Data with local notification"]

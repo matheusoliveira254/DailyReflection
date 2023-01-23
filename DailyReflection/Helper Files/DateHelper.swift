@@ -18,6 +18,7 @@ extension Date {
         formatter.timeStyle = .none
         return formatter.string(from: self)
     }
+    
     func toString(withFormat format: String = "MM-dd-yyyy") -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format

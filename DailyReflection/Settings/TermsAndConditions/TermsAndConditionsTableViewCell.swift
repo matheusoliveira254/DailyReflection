@@ -13,7 +13,6 @@ class TermsAndConditionsTableViewCell: UITableViewCell {
     @IBOutlet weak var termsAndConditionsLabel: UILabel!
     @IBOutlet weak var chevronIconImage: UIImageView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,7 +23,6 @@ class TermsAndConditionsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
 ////
 /*

@@ -10,6 +10,7 @@ import Foundation
 struct TopLevelDictionary: Decodable {
     let contents: Contents
 }
+
 struct Contents: Decodable, Encodable {
     let quotes: [Quotes]
 }

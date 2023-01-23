@@ -28,13 +28,13 @@ class DailyQuoteViewModel {
     init( delegate: DailyQuoteViewModelDelegate) {
         self.delegate = delegate
     }
+    
     //created the fetchDailyQuoteData func to fetch the quotes
      func fetchDailyQuoteData() {
          //loadQuotes is being assaigned to tempQuoteArray
      tempQuoteArray = loadQuotes(url: URL.quotesDoc)
          print(tempQuoteArray)
        
-         
          //Here we are checking if our completion was a success or a feilure
          NetworkController.fetchQod { result in
             switch result {
@@ -52,17 +52,15 @@ class DailyQuoteViewModel {
                         }
                 }
                 self.tempQuoteArray.insert(dailyQuoteData.contents.quotes[0], at: 0)
-
                 self.saveQuotes(quotes: self.tempQuoteArray)
-                
                 self.delegate?.updateViews()
             case .failure(let error):
                 print("Error fetching the data!",
                       error.errorDescription)
             }
-             
         }
     }
+    
     func saveQuotes(quotes: [Quotes]) {
         do {
             let encoder = JSONEncoder()
@@ -87,7 +85,6 @@ class DailyQuoteViewModel {
             return []
         }
     }
-    
 }//End of class.
 
 extension URL {
