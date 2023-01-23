@@ -232,8 +232,8 @@
 				A12BC5BF294A8D5600D5FFD5 /* Entries */,
 				A144A9BB2954D91B004B9874 /* Entry Detail */,
 				A1C87FE3296F2FDC00F51DC6 /* Past Entries */,
-				5F6C07C72964B7F800FBA415 /* Settings */,
 				5F87A9C3294BA11B00B87CA4 /* DailyQuotes */,
+				5F6C07C72964B7F800FBA415 /* Settings */,
 			);
 			path = DailyReflection;
 			sourceTree = "<group>";
