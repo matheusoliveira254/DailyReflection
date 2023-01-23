@@ -120,7 +120,7 @@
 				5F6C07C52964AE1300FBA415 /* SettingsDataTableViewController.swift */,
 				A10DE18C2978CB020099E023 /* Dark Mode */,
 				5F6C07D22966019500FBA415 /* TermsAndConditions */,
-				5F6C07D52966049500FBA415 /* New Group */,
+				5F6C07D52966049500FBA415 /* Privacy */,
 				5F044F38296605A10046C455 /* Notifications */,
 			);
 			path = Settings;
@@ -135,13 +135,13 @@
 			path = TermsAndConditions;
 			sourceTree = "<group>";
 		};
-		5F6C07D52966049500FBA415 /* New Group */ = {
+		5F6C07D52966049500FBA415 /* Privacy */ = {
 			isa = PBXGroup;
 			children = (
 				5F6C07D32966041400FBA415 /* Privacy.storyboard */,
 				5F6C07CA2964BCB100FBA415 /* PrivacyTableViewCell.swift */,
 			);
-			path = "New Group";
+			path = Privacy;
 			sourceTree = "<group>";
 		};
 		5F87A9C3294BA11B00B87CA4 /* DailyQuotes */ = {

@@ -13,7 +13,6 @@ class DailyQuotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel = DailyQuoteViewModel(delegate: self)
         viewModel.fetchDailyQuoteData()
     }
