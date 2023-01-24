@@ -13,8 +13,8 @@ class SettingsDataTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.reloadData()
         isDarkModeOn = UserDefaults.standard.bool(forKey: "isDarkModeOn")
+        self.tableView.reloadData()
     }
     
     // MARK: - Table view data source

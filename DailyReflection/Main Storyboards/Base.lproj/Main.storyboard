@@ -10,10 +10,10 @@
         <scene sceneID="QXW-3U-pLJ">
             <objects>
                 <tabBarController id="Fzd-p3-NIc" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zIa-dC-rHV">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="zIa-dC-rHV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="aq3-Cq-9Iy" kind="relationship" relationship="viewControllers" id="xZk-7l-ZhS"/>
@@ -35,6 +35,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeb-Rd-J4p">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -64,6 +66,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyp-01-zf6">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -93,6 +97,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pWN-jm-rab">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -122,6 +128,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ocO-AD-Git">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

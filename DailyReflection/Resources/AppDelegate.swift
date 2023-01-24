@@ -12,6 +12,10 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        if UITraitCollection.current.userInterfaceStyle == .dark {
+//            UserDefaults.standard.set(true, forKey: "isDarkModeOn")
+//        }
+        
         UNUserNotificationCenter.current().delegate = self
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
                     if granted {
