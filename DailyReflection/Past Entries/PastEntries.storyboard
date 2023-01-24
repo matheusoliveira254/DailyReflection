@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-Ph-hiz">
-                                <rect key="frame" x="16" y="91" width="361" height="677"/>
+                                <rect key="frame" x="16" y="100.66666666666669" width="361" height="667.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hmZ-3t-OiP">
                                     <size key="itemSize" width="128" height="128"/>
@@ -40,7 +40,7 @@
                                                         <constraint firstAttribute="height" constant="32" id="Z3P-5m-5Vf"/>
                                                         <constraint firstAttribute="width" constant="100" id="o0D-bh-r8z"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -70,12 +70,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-fH-5N7">
+                                <rect key="frame" x="16" y="69" width="361" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="18"/>
+                                <color key="textColor" red="0.58431380990000004" green="0.58431380990000004" blue="0.58431380990000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HHn-ev-CGB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cX0-fH-5N7" firstAttribute="top" secondItem="HHn-ev-CGB" secondAttribute="top" constant="10" id="3YI-qy-Iha"/>
                             <constraint firstItem="HHn-ev-CGB" firstAttribute="bottom" secondItem="dbo-Ph-hiz" secondAttribute="bottom" constant="50" id="E5u-yG-KVX"/>
-                            <constraint firstItem="dbo-Ph-hiz" firstAttribute="top" secondItem="HHn-ev-CGB" secondAttribute="top" constant="32" id="G2K-jw-k96"/>
+                            <constraint firstItem="dbo-Ph-hiz" firstAttribute="top" secondItem="cX0-fH-5N7" secondAttribute="bottom" constant="10" id="GdM-3X-Wo0"/>
+                            <constraint firstItem="HHn-ev-CGB" firstAttribute="trailing" secondItem="cX0-fH-5N7" secondAttribute="trailing" constant="16" id="Zyp-AB-6wd"/>
+                            <constraint firstItem="cX0-fH-5N7" firstAttribute="leading" secondItem="HHn-ev-CGB" secondAttribute="leading" constant="16" id="eRl-83-gRG"/>
                             <constraint firstItem="dbo-Ph-hiz" firstAttribute="leading" secondItem="HHn-ev-CGB" secondAttribute="leading" constant="16" id="kxT-1d-xdb"/>
                             <constraint firstItem="HHn-ev-CGB" firstAttribute="trailing" secondItem="dbo-Ph-hiz" secondAttribute="trailing" constant="16" id="rMU-Ni-7La"/>
                         </constraints>
@@ -83,6 +92,7 @@
                     <navigationItem key="navigationItem" title="Past Entries" id="pTm-vk-oQo"/>
                     <connections>
                         <outlet property="pastEntriesCollectionView" destination="dbo-Ph-hiz" id="Z6b-9C-UV7"/>
+                        <outlet property="pastEntriesHeaderLabel" destination="cX0-fH-5N7" id="eGB-ZP-7sC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8E-5Y-gRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

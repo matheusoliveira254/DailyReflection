@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 
 class EntryListTableViewController: UITableViewController, CLLocationManagerDelegate {
-
+    
     let viewModel = EntryListViewModel()
     var indexOfGroup: Int?
     
@@ -23,10 +23,23 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
         viewModel.loadEntries()
         let locationServices = LocationService()
         locationServices.locationManager.delegate = self
+        
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let statusBar = UIView(frame: scene.statusBarManager?.statusBarFrame ?? CGRect.zero)
+            statusBar.backgroundColor = UIColor(red: 0.05, green: 0.25, blue: 0.36, alpha: 1.00)
+            scene.windows.first?.addSubview(statusBar)
+        }
     }
-
+    
     // MARK: - Table view data source
-
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if viewModel.storage.entries.count == 0 {
+            return "No Entries! To Get Started Press The + Button ↗"
+        } else {
+            return ""
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if indexOfGroup != nil {
@@ -39,7 +52,7 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
             }
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entriesCell", for: indexPath) as! EntryListTableViewCell
         let entry = viewModel.storage.entries[indexPath.row]
@@ -53,7 +66,7 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
         indexOfGroup != nil ? cell.configure(entry: viewModel.storage.groupedEntries[indexOfGroup!][indexPath.row]) : cell.configure(entry: entry)
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if indexOfGroup != nil {
             return false
@@ -64,14 +77,14 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                viewModel.deleteEntry(index: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
+        if editingStyle == .delete {
+            viewModel.deleteEntry(index: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? EntryDetailViewController else {return}
