@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agL-w6-caR">
-                                <rect key="frame" x="15.999999999999996" y="83" width="41.666666666666657" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agL-w6-caR">
+                                <rect key="frame" x="16" y="83" width="361" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -95,6 +95,7 @@
                             <constraint firstItem="Sxr-Yv-mGb" firstAttribute="leading" secondItem="Hsi-5d-w9o" secondAttribute="leading" constant="16" id="IQp-ot-H46"/>
                             <constraint firstItem="gUQ-AV-mOH" firstAttribute="leading" secondItem="Hsi-5d-w9o" secondAttribute="leading" constant="10" id="L39-uK-5Cu"/>
                             <constraint firstItem="Hsi-5d-w9o" firstAttribute="trailing" secondItem="oUO-mw-h0t" secondAttribute="trailing" constant="20" id="Xoq-kd-Sqd"/>
+                            <constraint firstItem="Hsi-5d-w9o" firstAttribute="trailing" secondItem="agL-w6-caR" secondAttribute="trailing" constant="16" id="Xvf-92-SlG"/>
                             <constraint firstItem="agL-w6-caR" firstAttribute="leading" secondItem="Hsi-5d-w9o" secondAttribute="leading" constant="16" id="auM-Rt-7AL"/>
                             <constraint firstItem="Hsi-5d-w9o" firstAttribute="trailing" secondItem="Sxr-Yv-mGb" secondAttribute="trailing" constant="16" id="bgm-YL-CYj"/>
                             <constraint firstItem="oUO-mw-h0t" firstAttribute="leading" secondItem="Hsi-5d-w9o" secondAttribute="leading" constant="20" id="hCu-z9-0vJ"/>

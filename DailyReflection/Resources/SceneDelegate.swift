@@ -20,6 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if windowScene?.traitCollection.userInterfaceStyle == .dark {
             UserDefaults.standard.set(true, forKey: "isDarkModeOn")
+        } else {
+            UserDefaults.standard.set(false, forKey: "isDarkModeOn")
         }
         
         if UserDefaults.standard.bool(forKey: "isDarkModeOn") == true {
