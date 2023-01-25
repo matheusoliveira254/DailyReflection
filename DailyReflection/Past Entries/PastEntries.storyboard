@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Past Entries-->
+        <!--Previous Days-->
         <scene sceneID="uIN-F9-fEy">
             <objects>
                 <viewController id="KdI-9E-9Xv" customClass="PastEntriesViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                             <constraint firstItem="HHn-ev-CGB" firstAttribute="trailing" secondItem="dbo-Ph-hiz" secondAttribute="trailing" constant="16" id="rMU-Ni-7La"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Past Entries" id="pTm-vk-oQo"/>
+                    <navigationItem key="navigationItem" title="Previous Days" id="pTm-vk-oQo"/>
                     <connections>
                         <outlet property="pastEntriesCollectionView" destination="dbo-Ph-hiz" id="Z6b-9C-UV7"/>
                         <outlet property="pastEntriesHeaderLabel" destination="cX0-fH-5N7" id="eGB-ZP-7sC"/>

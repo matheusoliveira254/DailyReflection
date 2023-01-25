@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Entries List-->
+        <!--List-->
         <scene sceneID="6bM-Lj-wX2">
             <objects>
                 <tableViewController storyboardIdentifier="Entries" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sf5-eP-EYv" customClass="EntryListTableViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                             <outlet property="delegate" destination="Sf5-eP-EYv" id="Yn8-6K-BA8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Entries List" id="6T4-Rp-Ie4">
+                    <navigationItem key="navigationItem" title="List" id="6T4-Rp-Ie4">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="7vP-x2-fMf">
                             <color key="tintColor" red="0.58431380990000004" green="0.58431380990000004" blue="0.58431380990000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>

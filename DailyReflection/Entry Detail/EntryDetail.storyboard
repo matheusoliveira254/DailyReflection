@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About-->
+        <!--Day Details-->
         <scene sceneID="Cu7-b6-v8I">
             <objects>
                 <viewController id="7G6-L9-lFK" customClass="EntryDetailViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                             <constraint firstItem="XOH-Zi-JPH" firstAttribute="top" secondItem="B0G-2F-n8S" secondAttribute="bottom" constant="36" id="ume-pH-X3i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="qJe-9t-45Z">
+                    <navigationItem key="navigationItem" title="Day Details" id="qJe-9t-45Z">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="jDI-S9-VpQ">
                             <color key="tintColor" red="0.58431380990000004" green="0.58431380990000004" blue="0.58431380990000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>

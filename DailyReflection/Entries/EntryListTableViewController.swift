@@ -35,7 +35,7 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if viewModel.storage.entries.count == 0 {
-            return "No Entries! To Get Started Press The + Button ↗"
+            return "To Get Started Press The + Button ↗"
         } else {
             return ""
         }
