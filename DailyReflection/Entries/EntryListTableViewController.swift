@@ -26,7 +26,8 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
         
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             let statusBar = UIView(frame: scene.statusBarManager?.statusBarFrame ?? CGRect.zero)
-            statusBar.backgroundColor = UIColor(red: 0.05, green: 0.25, blue: 0.36, alpha: 1.00)
+//            statusBar.backgroundColor = UIColor(red: 0.05, green: 0.25, blue: 0.36, alpha: 1.00)
+            statusBar.backgroundColor = UIColor(named: "TabAndNavBarColor")
             scene.windows.first?.addSubview(statusBar)
         }
     }

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Entries-->
+        <!--Entries List-->
         <scene sceneID="6bM-Lj-wX2">
             <objects>
                 <tableViewController storyboardIdentifier="Entries" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sf5-eP-EYv" customClass="EntryListTableViewController" customModule="DailyReflection" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="230" id="NS1-20-EeN"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -92,8 +92,9 @@
                             <outlet property="delegate" destination="Sf5-eP-EYv" id="Yn8-6K-BA8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Entries" id="6T4-Rp-Ie4">
+                    <navigationItem key="navigationItem" title="Entries List" id="6T4-Rp-Ie4">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="7vP-x2-fMf">
+                            <color key="tintColor" red="0.58431380990000004" green="0.58431380990000004" blue="0.58431380990000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="4tV-9c-3sM" kind="show" identifier="createNewEntry" id="F5q-NH-t7i"/>
                             </connections>
@@ -102,7 +103,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNo-ss-arH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3365.6488549618321" y="-371.12676056338029"/>
+            <point key="canvasLocation" x="4292.3664122137407" y="-371.12676056338029"/>
         </scene>
         <!--EntryDetail-->
         <scene sceneID="8fx-8T-IeN">
@@ -112,7 +113,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEn-l1-nVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4169" y="-371"/>
+            <point key="canvasLocation" x="5094.6564885496182" y="-371.12676056338029"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

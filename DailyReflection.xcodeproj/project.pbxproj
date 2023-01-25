@@ -224,10 +224,10 @@
 		A1BE5DC42947C9D7002EFFFB /* DailyReflection */ = {
 			isa = PBXGroup;
 			children = (
+				A1CD958D297EFDC900A7749D /* Models */,
 				5FCAF4A8295224F90016FC56 /* Network */,
 				A1088A5829674ECC00C3A8F9 /* Helper Files */,
 				A1BE5DD92947CA00002EFFFB /* Resources */,
-				A1CD958D297EFDC900A7749D /* Models */,
 				A10DE1832978A4FB0099E023 /* Main Storyboards */,
 				A12BC5BF294A8D5600D5FFD5 /* Entries */,
 				A144A9BB2954D91B004B9874 /* Entry Detail */,
