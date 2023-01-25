@@ -9,12 +9,15 @@ import UIKit
 
 class DailyQuotesTableViewController: UITableViewController {
     
+    @IBOutlet weak var loadingQuotesActivityIndicator: UIActivityIndicatorView!
+    
     var viewModel: DailyQuoteViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = DailyQuoteViewModel(delegate: self)
         viewModel.fetchDailyQuoteData()
+        loadingQuotesActivityIndicator.startAnimating()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +38,8 @@ class DailyQuotesTableViewController: UITableViewController {
         
         let result = viewModel.tempQuoteArray[indexPath.row]
         cell.updateViews(quotes: result)
+        loadingQuotesActivityIndicator.stopAnimating()
+        loadingQuotesActivityIndicator.isHidden = true
         return cell
     }
 }// end of class
