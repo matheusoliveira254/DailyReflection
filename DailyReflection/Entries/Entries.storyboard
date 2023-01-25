@@ -103,7 +103,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNo-ss-arH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4292.3664122137407" y="-371.12676056338029"/>
+            <point key="canvasLocation" x="6145.801526717557" y="-371.12676056338029"/>
         </scene>
         <!--EntryDetail-->
         <scene sceneID="8fx-8T-IeN">
@@ -113,7 +113,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEn-l1-nVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5094.6564885496182" y="-371.12676056338029"/>
+            <point key="canvasLocation" x="6948.0916030534345" y="-371.12676056338029"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
