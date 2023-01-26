@@ -15,12 +15,10 @@ class EntryDetailViewModel {
     var dayScore: Int? = 5
     var storage: EntryStorable
     var entry: Entry?
-    var entryIndex: Int?
     
-    init(entry: Entry? = nil, entryIndex: Int? = nil, storage: EntryStorable = EntryStorage.sharedInstance) {
+    init(entry: Entry? = nil, storage: EntryStorable = EntryStorage.sharedInstance) {
         self.entry = entry
         self.storage = storage
-        self.entryIndex = entryIndex
     }
     
     func saveEntry(title: String, dayScore: Int, description: String) {
@@ -34,8 +32,7 @@ class EntryDetailViewModel {
     }
     
     private func updateEntry(newTitle: String, newDayScore: Int, newDescription: String) {
-        guard let entry = entry, let entryIndex = entryIndex else {return}
-        let entryToUpdate = storage.entries[entryIndex]
+        guard let entry = entry, let entryToUpdate = storage.entries.first(where: {$0.uuid == entry.uuid}) else {return}
         entryToUpdate.title = newTitle
         entryToUpdate.dayScore = newDayScore
         entryToUpdate.description = newDescription
