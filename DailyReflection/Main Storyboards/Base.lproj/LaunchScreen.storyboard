@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D (1)" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-AR-hst">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LightAndDarkLaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-AR-hst">
                                 <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="DFX-TO-x0o"/>
@@ -24,7 +25,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="TabAndNavBarColor"/>
                         <constraints>
                             <constraint firstItem="YqW-AR-hst" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Uvp-Jm-Bwm"/>
                             <constraint firstItem="YqW-AR-hst" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wrl-e0-v2s"/>
@@ -37,6 +38,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="D (1)" width="1024" height="1024"/>
+        <image name="LightAndDarkLaunchImage" width="1024" height="1024"/>
+        <namedColor name="TabAndNavBarColor">
+            <color red="0.89399999380111694" green="0.86299997568130493" blue="0.81199997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
