@@ -17,12 +17,9 @@ class DailyQuoteViewModel {
     var dailyQuoteData: TopLevelDictionary? // Created dailyQuoteData: TopLevelDictionary first level of JSON
     var tempQuoteArray: [Quotes] = [] // this property holds the temporary quotes
     var content: Contents?
-//    {
-//        self.dailyQuoteData?.contents.quotes ?? []
-//    }
+
     // Here i'm conforming to the protocol
     weak var delegate: DailyQuoteViewModelDelegate?
-//     private let networkController = NetworkController()
     
     //Delegate is being initialized (Here we are injecting dependency from the view model into this view controller because this view should not exist without its view model.
     init( delegate: DailyQuoteViewModelDelegate) {
@@ -40,8 +37,6 @@ class DailyQuoteViewModel {
             switch result {
             case .success(let dailyQuoteData):
                 //here dailyQuoteData is being append to tempQuoteArray
-//                self.tempQuoteArray.append(contentsOf: dailyQuoteData.contents.quotes)
-               // self.saveQuotes(quotes: self.tempQuoteArray)
                 print(self.tempQuoteArray.count)
                 // creted a for in to will loop into tempQuoteArray 
                     for temp in self.tempQuoteArray {
@@ -55,8 +50,7 @@ class DailyQuoteViewModel {
                 self.saveQuotes(quotes: self.tempQuoteArray)
                 self.delegate?.updateViews()
             case .failure(let error):
-                print("Error fetching the data!",
-                      error.errorDescription)
+                print("Error fetching the data!", error.errorDescription)
             }
         }
     }
@@ -73,10 +67,7 @@ class DailyQuoteViewModel {
     }
     
     func loadQuotes(url: URL) ->[Quotes] {
-//        var urlData = URL.quotesDoc
-//        if !FileManager.default.fileExists(atPath: urlData.path()) {
-//            urlData = url
-//        }
+
         do {
             let data = try Data(contentsOf: url)
             return try JSONDecoder().decode([Quotes].self, from: data)
@@ -89,6 +80,4 @@ class DailyQuoteViewModel {
 
 extension URL {
     static let quotesDoc = URL.documentsDirectory.appending(component: "quotesInfo").appendingPathExtension("json")
-    //quotesInfo
-    //quotesDatas
 }

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LightAndDarkLaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-AR-hst">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LightAndDarkIconImage" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-AR-hst">
                                 <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="DFX-TO-x0o"/>
@@ -38,7 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LightAndDarkLaunchImage" width="1024" height="1024"/>
+        <image name="LightAndDarkIconImage" width="1024" height="1024"/>
         <namedColor name="TabAndNavBarColor">
             <color red="0.89399999380111694" green="0.86299997568130493" blue="0.81199997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

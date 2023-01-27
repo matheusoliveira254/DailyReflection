@@ -15,9 +15,13 @@ class DarkModeTableViewCell: UITableViewCell {
             if sender.isOn {
                 window?.overrideUserInterfaceStyle = .dark
                 UserDefaults.standard.set(true, forKey: "isDarkModeOn")
+                UserDefaults.standard.set(true, forKey: "UserOptedForDarkMode")
+                UIApplication.shared.setAlternateIconName("AppIcon-2")
             } else {
                 window?.overrideUserInterfaceStyle = .light
                 UserDefaults.standard.set(false, forKey: "isDarkModeOn")
+                UserDefaults.standard.set(false, forKey: "UserOptedForDarkMode")
+                UIApplication.shared.setAlternateIconName(nil)
         }
     }
 }

@@ -15,6 +15,7 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel.loadEntries()
         let locationServices = LocationService()
         locationServices.locationManager.delegate = self
