@@ -54,15 +54,4 @@ extension PastEntriesViewController: UICollectionViewDelegate, UICollectionViewD
         vc.indexOfGroup = indexPath.row
         navigationController?.pushViewController(vc, animated: true)
     }
-//
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        if kind == UICollectionView.elementKindSectionHeader {
-//            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as! CollectionHeaderView
-//            if viewModel.storage.entries.count == 0 {
-//                headerView.titleLabel.text = "No Entries Yet"
-//            }
-//            return headerView
-//        }
-//        return UICollectionReusableView()
-//    }
 }

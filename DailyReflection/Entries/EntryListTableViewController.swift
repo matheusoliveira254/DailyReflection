@@ -13,28 +13,33 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
     let viewModel = EntryListViewModel()
     var indexOfGroup: Int?
     
-    override func viewWillAppear(_ animated: Bool) {
-        viewModel.loadEntries()
-        self.tableView.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel.loadEntries()
         let locationServices = LocationService()
         locationServices.locationManager.delegate = self
         
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             let statusBar = UIView(frame: scene.statusBarManager?.statusBarFrame ?? CGRect.zero)
-            statusBar.backgroundColor = UIColor(red: 0.05, green: 0.25, blue: 0.36, alpha: 1.00)
+            statusBar.backgroundColor = UIColor(named: "TabAndNavBarColor")
             scene.windows.first?.addSubview(statusBar)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.viewModel.loadEntries()
+            self.viewModel.storage.groupEntries()
+            self.tableView.reloadData()
         }
     }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if viewModel.storage.entries.count == 0 {
-            return "No Entries! To Get Started Press The + Button ↗"
+            return "To Get Started Press The + Button ↗"
         } else {
             return ""
         }
@@ -81,6 +86,9 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
             viewModel.deleteEntry(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Navigation
@@ -92,15 +100,13 @@ class EntryListTableViewController: UITableViewController, CLLocationManagerDele
             destination.viewModel = EntryDetailViewModel()
         } else if segue.identifier == "toEntryDetail" {
             guard let index = tableView.indexPathForSelectedRow else {return}
-            let indexInt = index.row
             var entryToSend: Entry
             if indexOfGroup != nil {
-                entryToSend = viewModel.storage.groupedEntries[indexOfGroup!][indexInt]
-                destination.hideBarButton = true
+                entryToSend = viewModel.storage.groupedEntries[indexOfGroup!][index.row]
             } else {
                 entryToSend = viewModel.storage.entries[index.row]
             }
-            destination.viewModel = EntryDetailViewModel(entry: entryToSend, entryIndex: indexInt)
+            destination.viewModel = EntryDetailViewModel(entry: entryToSend)
         }
     }
 }

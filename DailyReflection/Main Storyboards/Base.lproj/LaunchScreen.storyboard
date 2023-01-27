@@ -15,19 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D (1)" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-AR-hst">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="Sw4-N6-cBH">
                                 <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="DFX-TO-x0o"/>
-                                    <constraint firstAttribute="height" constant="200" id="Thg-V3-SaA"/>
+                                    <constraint firstAttribute="height" constant="200" id="KgK-fN-MbZ"/>
+                                    <constraint firstAttribute="width" constant="200" id="i34-cm-WeZ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.047058823530000002" green="0.2470588235" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.026737116280000001" green="0.1028397903" blue="0.21961981059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="YqW-AR-hst" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Uvp-Jm-Bwm"/>
-                            <constraint firstItem="YqW-AR-hst" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wrl-e0-v2s"/>
+                            <constraint firstItem="Sw4-N6-cBH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4DA-69-WWH"/>
+                            <constraint firstItem="Sw4-N6-cBH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="JKt-CR-RrZ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="D (1)" width="1024" height="1024"/>
+        <image name="LaunchScreenImage" width="1024" height="1024"/>
     </resources>
 </document>

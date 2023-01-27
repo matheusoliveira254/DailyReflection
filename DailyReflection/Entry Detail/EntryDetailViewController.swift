@@ -49,7 +49,7 @@ class EntryDetailViewController: UIViewController, UITextViewDelegate {
         let score = entryScoreSegmentedControl.selectedSegmentIndex + 1
         
         viewModel.saveEntry(title: newEntryTitle, dayScore: score, description: newEntryDescription)
-        navigationController?.popViewController(animated: true)
+            navigationController?.popViewController(animated: true)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

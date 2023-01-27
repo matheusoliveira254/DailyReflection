@@ -18,10 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        guard let _ = (scene as? UIWindowScene) else { return }
         let windowScene = scene as? UIWindowScene
         
-        if windowScene?.traitCollection.userInterfaceStyle == .dark {
-            UserDefaults.standard.set(true, forKey: "isDarkModeOn")
+        if UserDefaults.standard.bool(forKey: "UserOptedForDarkMode") != true {
+            if windowScene?.traitCollection.userInterfaceStyle == .dark {
+                UserDefaults.standard.set(true, forKey: "isDarkModeOn")
+            } else if windowScene?.traitCollection.userInterfaceStyle == .light {
+                UserDefaults.standard.set(false, forKey: "isDarkModeOn")
+            }
         } else {
-            UserDefaults.standard.set(false, forKey: "isDarkModeOn")
+            UserDefaults.standard.set(true, forKey: "isDarkModeOn")
         }
         
         if UserDefaults.standard.bool(forKey: "isDarkModeOn") == true {

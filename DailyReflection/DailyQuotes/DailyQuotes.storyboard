@@ -15,6 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="50U-ra-LPL">
+                            <rect key="frame" x="0.0" y="234" width="393" height="99"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="currentQuote" rowHeight="156" id="2U4-cb-Std" customClass="DailyQuoteTableViewCell" customModule="DailyReflection" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="156"/>
@@ -66,6 +70,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Daily Quotes" id="Ahe-vY-pfV"/>
+                    <connections>
+                        <outlet property="loadingQuotesActivityIndicator" destination="50U-ra-LPL" id="Thc-re-AWe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQb-OZ-VlB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
