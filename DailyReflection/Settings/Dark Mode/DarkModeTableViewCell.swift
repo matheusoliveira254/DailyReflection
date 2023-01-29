@@ -12,16 +12,13 @@ class DarkModeTableViewCell: UITableViewCell {
     @IBOutlet weak var darkModeSwitch: UISwitch!
 
     @IBAction func darkModeSwitchSwiped(_ sender: UISwitch) {
-            if sender.isOn {
-                window?.overrideUserInterfaceStyle = .dark
-                UserDefaults.standard.set(true, forKey: "isDarkModeOn")
-                UserDefaults.standard.set(true, forKey: "UserOptedForDarkMode")
-                UIApplication.shared.setAlternateIconName("AppIcon-2")
-            } else {
-                window?.overrideUserInterfaceStyle = .light
-                UserDefaults.standard.set(false, forKey: "isDarkModeOn")
-                UserDefaults.standard.set(false, forKey: "UserOptedForDarkMode")
-                UIApplication.shared.setAlternateIconName(nil)
-        }
+        switchThemeColor(isOn: sender.isOn)
+    }
+    
+    func switchThemeColor(isOn: Bool) {
+        window?.overrideUserInterfaceStyle = isOn ? .dark : .light
+        UserDefaults.standard.set(isOn ? true : false, forKey: "isDarkModeOn")
+        UserDefaults.standard.set(isOn ? true : false, forKey: "UserOptedForDarkMode")
+        UIApplication.shared.setAlternateIconName(isOn ? "AppIcon-2" : nil)
     }
 }
