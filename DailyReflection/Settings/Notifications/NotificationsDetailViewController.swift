@@ -100,6 +100,7 @@ class NotificationsDetailViewController: UIViewController {
         } else {
             notificationCenter.removePendingNotificationRequests(withIdentifiers: [self.quoteIdentifier])
             UserDefaults.standard.set(false, forKey: self.quoteNotificationKey)
+            UserDefaults.standard.set(false, forKey: "notificationsAllowed")
             print("Notification permission revoked.")
         }
     }
@@ -123,6 +124,7 @@ class NotificationsDetailViewController: UIViewController {
         } else {
             notificationCenter.removePendingNotificationRequests(withIdentifiers: [self.entryIdentifier])
             UserDefaults.standard.set(false, forKey: self.entryNotificationKey)
+            UserDefaults.standard.set(false, forKey: "notificationsAllowed")
             print("Notification permission revoked.")
         }
     }

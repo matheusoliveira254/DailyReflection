@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UNUserNotificationCenter.current().delegate = self
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
                     if granted {
-                        UserDefaults.standard.set(true, forKey: "notificationsAllowed")
+                        if UserDefaults.standard.bool(forKey: "notificationsAllowed") != false {
+                            UserDefaults.standard.set(true, forKey: "notificationsAllowed")
+                        }
                         print("User gave permissions for local notifications")
                     } else {
                         UserDefaults.standard.set(false, forKey: "notificationsAllowed")
