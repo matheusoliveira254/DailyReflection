@@ -21,11 +21,11 @@ class NotificationsDetailViewController: UIViewController {
     
     // MARK: - Properties
     var date = Date()
-    let notificationsAllowed = "notificationsAllowed"
+    let notificationsNotAllowed = "notificationsNotAllowed"
     
     let quoteIdentifier = "quoteReminder"
     var quoteNotificationTime = "quoteNotificationTime"
-    let quoteNotificationKey = "quoteNotificationAllowed"
+    let quoteNotificationKey = "quoteNotificationNotAllowed"
     var notificationCenter = UNUserNotificationCenter.current()
     lazy var dailyQuoteContent: UNMutableNotificationContent = {
         let content = UNMutableNotificationContent()
@@ -39,7 +39,7 @@ class NotificationsDetailViewController: UIViewController {
     
     let entryIdentifier = "entryReminder"
     var entryNotificationTime = "jornalNotificationTime"
-    let entryNotificationKey = "entryNotificationAllowed"
+    let entryNotificationKey = "entryNotificationNotAllowed"
     lazy var entryContent: UNMutableNotificationContent = {
         let newContent = UNMutableNotificationContent()
         newContent.title = "How did your day go?"
@@ -52,22 +52,6 @@ class NotificationsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if UserDefaults.standard.bool(forKey: "notificationsAllowed") == true {
-            toggleQuoteNotificationsSwitch.isOn = true
-            toogleEntryNotificationsSwitch.isOn = true
-        } else {
-            if UserDefaults.standard.bool(forKey: "quoteNotificationAllowed") == true {
-                toggleQuoteNotificationsSwitch.isOn = true
-            } else {
-                toggleQuoteNotificationsSwitch.isOn = false
-            }
-            
-            if UserDefaults.standard.bool(forKey: "entryNotificationAllowed") == true {
-                toogleEntryNotificationsSwitch.isOn = true
-            } else {
-                toogleEntryNotificationsSwitch.isOn = false
-            }
-        }
         
         if let quoteNotificationTime = UserDefaults.standard.object(forKey: quoteNotificationTime) as? Data,
            let quoteTime = try? JSONDecoder().decode(DateComponents.self, from: quoteNotificationTime),
@@ -82,17 +66,23 @@ class NotificationsDetailViewController: UIViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureSwitches()
+    }
+    
     @IBAction func quoteNotificationsToggle(_ sender: Any) {
         if toggleQuoteNotificationsSwitch.isOn == true {
             notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                 if granted {
                     self.notificationToggleTapped(dateSelector: self.quoteDatePicker, selectedTimeFor: self.quoteNotificationTime, notificationIdentifier: self.quoteIdentifier, notificationContent: self.dailyQuoteContent)
-                    UserDefaults.standard.set(true, forKey: self.quoteNotificationKey)
+                    UserDefaults.standard.set(false, forKey: self.quoteNotificationKey)
                     print("Notification permission granted.")
                 } else {
                     if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
                         DispatchQueue.main.async {
                             UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
+                            self.toggleQuoteNotificationsSwitch.isOn = false
                         }
                     }
                     print("Notification permission denied currently, asking for permission on settings again.")
@@ -100,8 +90,8 @@ class NotificationsDetailViewController: UIViewController {
             }
         } else {
             notificationCenter.removePendingNotificationRequests(withIdentifiers: [self.quoteIdentifier])
-            UserDefaults.standard.set(false, forKey: self.quoteNotificationKey)
-            UserDefaults.standard.set(false, forKey: self.notificationsAllowed)
+            UserDefaults.standard.set(true, forKey: self.quoteNotificationKey)
+            UserDefaults.standard.set(true, forKey: self.notificationsNotAllowed)
             print("Notification permission revoked.")
         }
     }
@@ -111,12 +101,13 @@ class NotificationsDetailViewController: UIViewController {
             notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                 if granted {
                     self.notificationToggleTapped(dateSelector: self.entryDatePicker, selectedTimeFor: self.entryNotificationTime, notificationIdentifier: self.entryIdentifier, notificationContent: self.entryContent)
-                    UserDefaults.standard.set(true, forKey: self.entryNotificationKey)
+                    UserDefaults.standard.set(false, forKey: self.entryNotificationKey)
                     print("Notification permission granted.")
                 } else {
                     if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
                         DispatchQueue.main.async {
                             UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
+                            self.toogleEntryNotificationsSwitch.isOn = false
                         }
                     }
                     print("Notification permission denied currently, asking for permission on settings again.")
@@ -124,10 +115,18 @@ class NotificationsDetailViewController: UIViewController {
             }
         } else {
             notificationCenter.removePendingNotificationRequests(withIdentifiers: [self.entryIdentifier])
-            UserDefaults.standard.set(false, forKey: self.entryNotificationKey)
-            UserDefaults.standard.set(false, forKey: self.notificationsAllowed)
+            UserDefaults.standard.set(true, forKey: self.entryNotificationKey)
+            UserDefaults.standard.set(true, forKey: self.notificationsNotAllowed)
             print("Notification permission revoked.")
         }
+    }
+    
+    @IBAction func quotePickerChange(_ sender: Any) {
+        quoteNotificationsToggle((Any).self)
+    }
+    
+    @IBAction func entryDatePickerChange(_ sender: Any) {
+        entryNotificationsToggle((Any).self)
     }
     
     func notificationToggleTapped(dateSelector: UIDatePicker, selectedTimeFor: String, notificationIdentifier: String, notificationContent: UNMutableNotificationContent) {
@@ -147,11 +146,22 @@ class NotificationsDetailViewController: UIViewController {
         }
     }
     
-    @IBAction func quotePickerChange(_ sender: Any) {
-        quoteNotificationsToggle((Any).self)
-    }
-    
-    @IBAction func entryDatePickerChange(_ sender: Any) {
-        entryNotificationsToggle((Any).self)
+    func configureSwitches() {
+        if UserDefaults.standard.bool(forKey: notificationsNotAllowed) == false {
+            toggleQuoteNotificationsSwitch.isOn = true
+            toogleEntryNotificationsSwitch.isOn = true
+        } else {
+            if UserDefaults.standard.bool(forKey: quoteNotificationKey) == false {
+                toggleQuoteNotificationsSwitch.isOn = true
+            } else {
+                toggleQuoteNotificationsSwitch.isOn = false
+            }
+            
+            if UserDefaults.standard.bool(forKey: entryNotificationKey) == false {
+                toogleEntryNotificationsSwitch.isOn = true
+            } else {
+                toogleEntryNotificationsSwitch.isOn = false
+            }
+        }
     }
 }// End of class.
