@@ -20,8 +20,9 @@ class NotificationsDetailViewController: UIViewController {
     @IBOutlet weak var entryDatePicker: UIDatePicker!
     
     // MARK: - Properties
-    
     var date = Date()
+    let notificationsAllowed = "notificationsAllowed"
+    
     let quoteIdentifier = "quoteReminder"
     var quoteNotificationTime = "quoteNotificationTime"
     let quoteNotificationKey = "quoteNotificationAllowed"
@@ -69,15 +70,15 @@ class NotificationsDetailViewController: UIViewController {
         }
         
         if let quoteNotificationTime = UserDefaults.standard.object(forKey: quoteNotificationTime) as? Data,
-           let time = try? JSONDecoder().decode(DateComponents.self, from: quoteNotificationTime),
-           let date = Calendar.current.date(from: time) {
-            quoteDatePicker.date = date
+           let quoteTime = try? JSONDecoder().decode(DateComponents.self, from: quoteNotificationTime),
+           let quoteDate = Calendar.current.date(from: quoteTime) {
+            quoteDatePicker.date = quoteDate
         }
         
         if let journalNotificationTime = UserDefaults.standard.object(forKey: entryNotificationTime) as? Data,
-           let newTime = try? JSONDecoder().decode(DateComponents.self, from: journalNotificationTime),
-           let newDate = Calendar.current.date(from: newTime) {
-            entryDatePicker.date = newDate
+           let journalTime = try? JSONDecoder().decode(DateComponents.self, from: journalNotificationTime),
+           let journalDate = Calendar.current.date(from: journalTime) {
+            entryDatePicker.date = journalDate
         }
     }
 
@@ -100,7 +101,7 @@ class NotificationsDetailViewController: UIViewController {
         } else {
             notificationCenter.removePendingNotificationRequests(withIdentifiers: [self.quoteIdentifier])
             UserDefaults.standard.set(false, forKey: self.quoteNotificationKey)
-            UserDefaults.standard.set(false, forKey: "notificationsAllowed")
+            UserDefaults.standard.set(false, forKey: self.notificationsAllowed)
             print("Notification permission revoked.")
         }
     }
@@ -124,7 +125,7 @@ class NotificationsDetailViewController: UIViewController {
         } else {
             notificationCenter.removePendingNotificationRequests(withIdentifiers: [self.entryIdentifier])
             UserDefaults.standard.set(false, forKey: self.entryNotificationKey)
-            UserDefaults.standard.set(false, forKey: "notificationsAllowed")
+            UserDefaults.standard.set(false, forKey: self.notificationsAllowed)
             print("Notification permission revoked.")
         }
     }
