@@ -22,10 +22,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZV-0a-Hmo">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fZV-0a-Hmo">
                                 <rect key="frame" x="318" y="99" width="51" height="31"/>
                                 <connections>
-                                    <action selector="allowNotificationsToggle:" destination="j7a-8j-HrI" eventType="valueChanged" id="Pfz-vd-bwm"/>
+                                    <action selector="quoteNotificationsToggle:" destination="j7a-8j-HrI" eventType="valueChanged" id="l61-G5-eKx"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-6v-4Gm">
@@ -40,7 +40,7 @@
                                     <!--2023-01-10 16:00:00 +0000-->
                                 </date>
                                 <connections>
-                                    <action selector="datePickerChange:" destination="j7a-8j-HrI" eventType="valueChanged" id="VaZ-ip-C5M"/>
+                                    <action selector="quotePickerChange:" destination="j7a-8j-HrI" eventType="valueChanged" id="lPh-Hf-l8x"/>
                                 </connections>
                             </datePicker>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4f-lY-x1z">
@@ -56,10 +56,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-OC-jwh">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-OC-jwh">
                                 <rect key="frame" x="318" y="357.33333333333331" width="51" height="31"/>
                                 <connections>
-                                    <action selector="entryNotificationsToggle:" destination="j7a-8j-HrI" eventType="valueChanged" id="LpM-ji-DWD"/>
+                                    <action selector="entryNotificationsToggle:" destination="j7a-8j-HrI" eventType="valueChanged" id="FTv-WD-KhH"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2v-Yq-Wll">
@@ -74,7 +74,7 @@
                                     <!--2023-01-18 04:00:00 +0000-->
                                 </date>
                                 <connections>
-                                    <action selector="entryDatePickerChange:" destination="j7a-8j-HrI" eventType="valueChanged" id="5Pk-d1-MNt"/>
+                                    <action selector="entryDatePickerChange:" destination="j7a-8j-HrI" eventType="valueChanged" id="UMq-ec-IcA"/>
                                 </connections>
                             </datePicker>
                         </subviews>
@@ -108,14 +108,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Notifications" id="B8y-PP-qNd"/>
                     <connections>
-                        <outlet property="AllowNotificationsLabel" destination="f15-jF-her" id="p4g-8k-dBx"/>
-                        <outlet property="entryDatePicker" destination="Yar-GU-CDO" id="Mbc-y6-7ih"/>
+                        <outlet property="allowNotificationsLabel" destination="f15-jF-her" id="p4g-8k-dBx"/>
+                        <outlet property="entryDatePicker" destination="Yar-GU-CDO" id="oKj-9c-4GE"/>
                         <outlet property="entryNotificationsLabel" destination="EkT-Cj-VJs" id="a5p-0e-kEG"/>
-                        <outlet property="myDatePicker" destination="aVm-jO-0bI" id="fYs-mY-AjE"/>
-                        <outlet property="notificationTimeLabel" destination="C5u-6v-4Gm" id="oKT-aL-AAU"/>
+                        <outlet property="quoteDatePicker" destination="aVm-jO-0bI" id="0hg-y3-j5L"/>
+                        <outlet property="quoteNotificationTimeLabel" destination="C5u-6v-4Gm" id="oKT-aL-AAU"/>
                         <outlet property="separatingView" destination="O4f-lY-x1z" id="drP-xq-bhy"/>
-                        <outlet property="toggleNotificationsSwitch" destination="fZV-0a-Hmo" id="Pzd-55-GMZ"/>
-                        <outlet property="toogleEntrySwitch" destination="9TS-OC-jwh" id="FhZ-yv-UqT"/>
+                        <outlet property="toggleQuoteNotificationsSwitch" destination="fZV-0a-Hmo" id="HVe-iB-fg4"/>
+                        <outlet property="toogleEntryNotificationsSwitch" destination="9TS-OC-jwh" id="YS0-1C-muG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Etx-ob-dPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
