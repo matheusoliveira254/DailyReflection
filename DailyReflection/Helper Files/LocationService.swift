@@ -33,7 +33,6 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     
     func requestUpdatingLocation() {
         if locationManager.authorizationStatus == .denied || locationManager.authorizationStatus == .restricted || locationManager.authorizationStatus == .notDetermined {
-            locationManager.requestAlwaysAuthorization()
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
         }
