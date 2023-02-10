@@ -27,6 +27,15 @@ class SettingsDataTableViewController: UITableViewController {
         return 80
     }
     
+    
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.row == 2 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "termsAndConditionsCell", for: indexPath)

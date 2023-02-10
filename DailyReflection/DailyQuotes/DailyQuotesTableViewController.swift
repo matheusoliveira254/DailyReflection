@@ -33,6 +33,10 @@ class DailyQuotesTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+            return false
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "currentQuote", for: indexPath) as? DailyQuoteTableViewCell else {return UITableViewCell()}
         
